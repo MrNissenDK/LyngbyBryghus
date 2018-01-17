@@ -1,0 +1,76 @@
+﻿@using Repos.Models
+@model Products
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<section class="container paddingT20" id="product-details">
+
+    <header class="row">
+        <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12">@Model.Name</h2>
+    </header>
+
+    <article class="row row-eq-height paddingB20">
+
+        <section class="col-lg-4 col-md-4 col-sm-offset-0 col-sm-6 col-xs-offset-3 col-xs-6 product-image">
+            <a href="#">
+                <figure>
+                    <img src="~/Images/ProductDetailsImages/1.jpg" class="img-responsive"  type="button" data-toggle="modal" data-target="#myModal" />
+                    <figcaption>Pris: @Model.Price kr</figcaption>
+                </figure>
+                
+            </a>
+        </section>
+
+        <section class="col-lg-8 col-md-8 col-md-6 col-xs-12 product-text">
+
+            <section class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h3 class="marginT0">Beskrivelse</h3>
+                    <p>@Model.Description</p>
+                </div>
+            </section>
+
+
+            <section class="row product-text-last">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h3>Detalijeret info</h3>
+                    <p>@Model.Details</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h3>Praktisk Info</h3>
+                    <p>@Model.Info</p>
+                </div>
+            </section>
+
+            <a href="#" class="btn btn-custom">Se næste</a>
+        </section>
+    </article>
+
+
+</section>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">@Model.Name</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="~/Images/1.jpg" class="img-responsive" />
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-custom" data-dismiss="modal">Luk</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+

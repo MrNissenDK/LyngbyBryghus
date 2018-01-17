@@ -25,10 +25,10 @@
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#0">Alle</a></li>
+                <li><a href="/Product/Index" data-tag="*" class="cattegoryLink">Alle</a></li>
                 @foreach (Category cat in Model.Categories)
                 {
-                    <li><a href="#@cat.ID" onclick="ShowProducts(@("\""+cat.Name+"\""));">@cat.Name</a></li>
+                    <li><a href="/Product/Index?tag=@cat.Name" data-tag="@cat.Name" class="cattegoryLink">@cat.Name</a></li>
                 }
 
             </ul>
@@ -37,29 +37,20 @@
     </header>
 
 
-
     <div class="row paddingT20">
-
         @foreach (RProducts product in Model.Products)
-            {
-                string[] url = Request.Url.ToString().Split('#');
-                int tag = 0;
-
-                if (url.Length > 1)
-                {
-                int.TryParse(url[2], out tag);
-                }
-
-                bool display = true;
-            <a href="/Product/Details/@product.ID" data-tags="@foreach (Category Cat in product.categorys) { WriteLiteral(Cat.Name + ','); display = tag.Equals(Cat.ID); }" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6"  style="@((display || tag.Equals(0))?"" : "display:none;")">
+		{
+			string tag = Request.QueryString["tag"];
+			bool show = string.IsNullOrEmpty(tag);
+			<a href="/Product/Details/@product.ID" data-tags="@foreach (Category Cat in product.categorys) { WriteLiteral(Cat.Name + ','); if (!show) { show = tag.Equals(Cat.Name); } }" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6" style="display: @(show? "block":"none");">
                 <figure>
                     <img src="~/Images/ProductAllImages/1.jpg" class="img-responsive" />
                     <figcaption>@product.Name</figcaption>
                 </figure>
             </a>
         }
-        
-        
+
+
 
     </div>
 </section>

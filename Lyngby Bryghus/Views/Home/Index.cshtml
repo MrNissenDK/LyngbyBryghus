@@ -51,8 +51,10 @@
 
     <section class="row paddingB20" id="welcome-section">
         <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12 text-center">
-            <h2>VELKOMMEN TIL LYNGBY BRYGHUS</h2>
-            <p class="margin0">Lyngby Bryghus er et mikro bryggeri placeret midt på Djursland. Lyngby Bryghus har brygget og solgt øl fra deres gårdbutik de sidste par år.</p>
+            <h2 class="Head-Title">@Html.Raw(Model.json["Pages"]["/Home/Index"]["Title"])</h2>
+			<a data-jPath="['Pages']['/Home/Index']['Title']" data-target=".Head-Title" class="Edit">Rediger</a>
+            <p class="margin0 Head-Itroduction">@Html.Raw(Model.json["Pages"]["/Home/Index"]["Introduction"])</p>
+			<a data-jPath="['Pages']['/Home/Index']['Introduction']" data-target=".Head-Itroduction" class="Edit">Rediger</a>
         </div>
     </section>
 </div>

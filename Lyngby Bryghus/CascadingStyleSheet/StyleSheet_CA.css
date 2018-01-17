@@ -340,9 +340,41 @@ img {
 /*BESTILLING SLUT*/
 
 /*KONTAKT START*/
-#concact-view iframe{
-    width:100%;
-    height:400px;
+#logocontainer {
+    padding: 40px 0 40px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+    #logocontainer div:first-child {
+        z-index: 1;
+        position: absolute;
+        background-color: #f6f6f6;
+        width: 300px;
+        height: 44px;
+        margin: 0 auto;
+        left: 50%;
+        bottom: 3px;
+        transform: translate(-50%, -50%) skew(-30deg);
+    }
+
+    #logocontainer div img {
+        margin: 0 auto;
+        -webkit-transform: skew(30deg);
+        display: block;
+    }
+
+    #logocontainer div:last-child {
+        width: 100%;
+        height: 10px;
+        background-color: #ab5958;
+    }
+
+#contactpage ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 4px;
 }
 /*KONTAKT SLUT*/
 

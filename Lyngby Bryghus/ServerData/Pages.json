@@ -11,6 +11,10 @@
         "Title": "Send en kage",
         "Info": "Overrask et familiemedlem eller en ven. <br/> Her kan du vælge en af vores pakker."
       }
+    },
+    "/Product/Index": {
+      "Title": "ALLE KAGERNE",
+      "Info": "Lorem KAGE dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy."
     }
   }
 }

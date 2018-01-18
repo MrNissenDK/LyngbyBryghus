@@ -24,7 +24,8 @@ namespace Lyngby_Bryghus.Controllers
             ProductsView PV = new ProductsView
             {
                 Products = PF.GetAllRealtion(),
-                Categories = CF.GetAll()
+                Categories = CF.GetAll(),
+                json = JObject.Parse(FT.LoadFile(Request.PhysicalApplicationPath + "/ServerData/Pages.json"))
             };
 
             return View(PV);

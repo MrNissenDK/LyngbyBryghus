@@ -50,7 +50,7 @@ namespace Lyngby_Bryghus.Controllers
 
         public ActionResult Order()
         {
-            return View();
+            return View(JObject.Parse(FT.LoadFile(Request.PhysicalApplicationPath + "/ServerData/Pages.json")));
         }
 
     }

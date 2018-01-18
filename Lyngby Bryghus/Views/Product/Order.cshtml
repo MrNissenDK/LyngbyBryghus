@@ -1,4 +1,5 @@
-﻿
+﻿@using Newtonsoft.Json.Linq
+@model JObject
 @{
     ViewBag.Title = "Order";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
@@ -10,12 +11,12 @@
             <img src="~/Images/ContentImage/order1.svg" class="img-responsive" />
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
-            <h2>Bestil enkelt eller flere øl</h2>
-            <p class="paddingB20">
-                Ønsker du ikke at købe et abonnement, er det også muligt <br />
-                at ringe og bestille enkelt eller flere på: + 45 43 24 54 23
-                <br /> eller giv os besked ved at trykke her:
+            <h2 class="Order-title">@Html.Raw(Model["Pages"]["/Product/Order"]["Title"])</h2>
+            <a data-jPath="['Pages']['/Product/Order']['Title']" data-target=".Order-title" class="Edit">Rediger</a>
+            <p class="paddingB20 Order-info">
+                @Html.Raw(Model["Pages"]["/Product/Order"]["Info"])
             </p>
+            <a data-jPath="['Pages']['/Product/Order']['Info']" data-target=".Order-info" class="Edit">Rediger</a>
             <a href="/Home/Contact/" class="btn btn-custom">Kontakt</a>
         </div>
     </div>
@@ -24,11 +25,12 @@
             <img src="~/Images/ContentImage/order2.jpg" class="img-responsive" />
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
-            <h2>Køb et abonnement</h2>
+            <h2 class="Order-SubscriptionTitle">@Html.Raw(Model["Pages"]["/Product/Order"]["Subscription"]["Title"])</h2>
+            <a data-jPath="['Pages']['/Product/Order'][''Subscription']['Title']" data-target=".Order-SubscriptionTitle" class="Edit">Rediger</a>
             <p class="paddingB20">
-                Få en månedlig overraskelse ved at købe abonnement hos Lyngby Bryghus.
-                <br class="hidden-md" />Hvert måned bliver der dannet en pakke med tilfældige øl
+                @Html.Raw(Model["Pages"]["/Product/Order"]["Subscription"]["Info"])
             </p>
+            <a data-jPath="['Pages']['/Product/Order'][''Subscription']['Title']" data-target=".Order-SubscriptionTitle" class="Edit">Rediger</a>
             <a href="/Product/Subscription/" class="btn btn-custom">Køb abonnement</a>
         </div>
         <div class="col-lg-6 col-md-6 hidden-sm hidden-xs padding0">

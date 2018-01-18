@@ -15,6 +15,18 @@
     "/Product/Index": {
       "Title": "ALLE KAGERNE",
       "Info": "Lorem KAGE dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy."
+    },
+    "/Product/Order": {
+      "Title": "Bestil enkelt eller flere kager",
+      "Info": "\n                Ønsker du ikke at købe en KÆMPE kage!!, er det også muligt at ringe og bestille enkelt eller flere på: @ = % ? + 45 43 24 54 23 eller giv os besked ved at trykke her:\n            ",
+      "Subscription": {
+        "Title": "Køb et abonnement",
+        "Info": "Få en månedlig overraskelse ved at købe abonnement hos Lyngby Bryghus. Hvert måned bliver der dannet en pakke med tilfældige øl"
+      },
+      "Package": {
+        "Title": "Send en gavepakke",
+        "Info": "Overrask et familiemedlem eller ven, ved at bestille en af denne måneds pakkeløsninger."
+      }
     }
   }
 }

@@ -45,8 +45,9 @@ namespace Lyngby_Bryghus.Controllers
         {
             return View();
         }
-
-
+        
+        [HttpPost]
+        [ValidateInput(false)]
         public ActionResult update(string jPath, string value)
         {
             JObject json = JObject.Parse(FT.LoadFile(Request.PhysicalApplicationPath + "/ServerData/Pages.json"));
@@ -54,7 +55,7 @@ namespace Lyngby_Bryghus.Controllers
             json.SelectToken(jPath).Replace(value);
             bool work = FT.SaveJson(json.ToString(), Request.PhysicalApplicationPath + "/ServerData/Pages.json");
 
-            return Content(work.ToString());
+            return Redirect(Request.UrlReferrer.ToString());
         }
 
     }

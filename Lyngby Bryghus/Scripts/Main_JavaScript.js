@@ -29,15 +29,34 @@
 
 
 
+	let value;
 	$("a.Edit").click(function (e) {
 		e.preventDefault();
+		let Editor = $("#Editor");
+		Editor.show();
 		let ancher = $(this);
-		let value = $(ancher.attr("data-target"));
+		let title = ancher.attr("data-Title");
+		let jPath = ancher.attr("data-jPath");
+		value = $(ancher.attr("data-target"));
 
-		let newValue = prompt("Enter ny værdi", value.html());
-		value.html(newValue);
-		$.post("/Home/update", { jPath: ancher.attr("data-jPath"), value: newValue }).done(function (data) {
+		Editor.find("form input[name=jPath]").val(jPath);
+		Editor.find("form .Title").val(title);
+		Editor.find("form textarea").val(value.html());
+
+		//let newValue = prompt("Enter ny værdi", value.html());
+		//value.html(newValue);
+		//$.post("/Home/update", { jPath: ancher.attr("data-jPath"), value: newValue }).done(function (data) {
+		//	console.log(data);
+		//});
+	});
+
+	/*document.forms.Editor.addEventListener("submit", function (e) {
+		let Editor = $("#Editor");
+		console.log($(this).serialize());
+		Editor.hide();
+		value.html(this.value.value);
+		$.post("/Home/update", { jPath: escape(this.jPath.value), value: escape(this.value.value) }).done(function (data) {
 			console.log(data);
 		});
-	})
+	});*/
 });

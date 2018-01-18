@@ -52,9 +52,9 @@
     <section class="row paddingB20" id="welcome-section">
         <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12 text-center">
             <h2 class="Head-Title">@Html.Raw(Model.json["Pages"]["/Home/Index"]["Title"])</h2>
-			<a data-jPath="['Pages']['/Home/Index']['Title']" data-target=".Head-Title" class="Edit">Rediger</a>
+			<a data-jPath="['Pages']['/Home/Index']['Title']" data-target=".Head-Title" data-Title="Overskrift" class="Edit">Rediger</a>
             <p class="margin0 Head-Introduction">@Html.Raw(Model.json["Pages"]["/Home/Index"]["Introduction"])</p>
-			<a data-jPath="['Pages']['/Home/Index']['Introduction']" data-target=".Head-Introduction" class="Edit">Rediger</a>
+			<a data-jPath="['Pages']['/Home/Index']['Introduction']" data-target=".Head-Introduction" data-Title="Introduktion" class="Edit">Rediger</a>
         </div>
     </section>
 </div>
@@ -95,18 +95,18 @@
         </section>
         <section class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <h2 class="Subscription-title">@Html.Raw(Model.json["Pages"]["/Home/Index"]["Subscription"]["Title"])</h2>
-            <a data-jPath="['Pages']['/Home/Index']['Subscription']['Title']" data-target=".Subscription-title" class="Edit">Rediger</a>
+            <a data-jPath="['Pages']['/Home/Index']['Subscription']['Title']" data-target=".Subscription-title" data-Title="Abonument title" class="Edit">Rediger</a>
             <p class="Subscription-info">@Html.Raw(Model.json["Pages"]["/Home/Index"]["Subscription"]["Info"])</p>
-            <a data-jPath="['Pages']['/Home/Index']['Subscription']['Info']" data-target=".Subscription-info" class="Edit">Rediger</a>
+            <a data-jPath="['Pages']['/Home/Index']['Subscription']['Info']" data-target=".Subscription-info" data-Title="Abonument info" class="Edit">Rediger</a>
             <br/>
             <a href="/Product/Subscription/" class="btn btn-custom">KØB ABONNEMENT</a>
         </section>
 
         <section class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <h2 class="Package-title">@Html.Raw(Model.json["Pages"]["/Home/Index"]["Package"]["Title"])</h2>
-            <a data-jPath="['Pages']['/Home/Index']['Package']['Title']" data-target=".Package-title" class="Edit">Rediger</a>
+            <a data-jPath="['Pages']['/Home/Index']['Package']['Title']" data-target=".Package-title"  data-Title="Pakke title" class="Edit">Rediger</a>
             <p class="Package-info">@Html.Raw(Model.json["Pages"]["/Home/Index"]["Package"]["Info"])</p>
-            <a data-jPath="['Pages']['/Home/Index']['Package']['Info']" data-target=".Package-info" class="Edit">Rediger</a>
+            <a data-jPath="['Pages']['/Home/Index']['Package']['Info']" data-target=".Package-info"  data-Title="Pakke info" class="Edit">Rediger</a>
             <br/>
             <a href="/Product/Package/" class="btn btn-custom">VÆLG PAKKE</a>
         </section>

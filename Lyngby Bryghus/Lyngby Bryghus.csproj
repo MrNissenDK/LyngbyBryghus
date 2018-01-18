@@ -164,6 +164,7 @@
     <Content Include="Images\ProductAllImages\Small\Tjekkisk.png" />
     <Content Include="Images\ProductAllImages\Small\ToxicWaist.png" />
     <Content Include="Images\ProductAllImages\Small\ViennaLager.png" />
+    <Content Include="Images\SliderImage\sliderimage1.jpg" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\Main_JavaScript.js" />
     <Content Include="Scripts\tinymce\jquery.tinymce.min.js" />

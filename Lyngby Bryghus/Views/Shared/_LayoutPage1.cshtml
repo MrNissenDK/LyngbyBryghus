@@ -90,7 +90,7 @@
 					margin: 0;
 					vertical-align: text-bottom;
 				}
-				#Editor form textarea {
+				#Editor > form > textarea {
 					position: absolute;
 					bottom: 0;
 					box-sizing: border-box;
@@ -99,11 +99,15 @@
 					max-width: 100%;
 					max-height: 95%;
 				}
-				#Editor form button {
+				#Editor > form > button {
+					z-index: 1;
 					position: absolute;
 					bottom: 0;
 					right: 0;
 				}
+		#mceu_15 {
+			z-index: 10000;
+		}
 	</style>
 	<div id="Editor" style="display:none;">
 		<form name="Editor" action="/Home/update" method="post">
@@ -113,10 +117,11 @@
 			<button>save</button>
 		</form>
 	</div>
-    
+
+	<script src="~/Scripts/tinymce/tinymce.min.js"></script>
     <script src="~/Scripts/jquery-3.2.1.min.js"></script>
     <script src="~/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="~/Scripts/Main_JavaScript.js"></script>
-	<script src="~/Scripts/tinymce/jquery.tinymce.min.js"></script>
+
 </body>
 </html>

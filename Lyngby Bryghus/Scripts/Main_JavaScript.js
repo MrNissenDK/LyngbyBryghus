@@ -43,20 +43,22 @@
 		Editor.find("form .Title").val(title);
 		Editor.find("form textarea").val(value.html());
 
-		//let newValue = prompt("Enter ny værdi", value.html());
-		//value.html(newValue);
-		//$.post("/Home/update", { jPath: ancher.attr("data-jPath"), value: newValue }).done(function (data) {
-		//	console.log(data);
-		//});
 	});
-
-	/*document.forms.Editor.addEventListener("submit", function (e) {
-		let Editor = $("#Editor");
-		console.log($(this).serialize());
-		Editor.hide();
-		value.html(this.value.value);
-		$.post("/Home/update", { jPath: escape(this.jPath.value), value: escape(this.value.value) }).done(function (data) {
-			console.log(data);
-		});
-	});*/
+	tinymce.init({
+		selector: 'textarea',
+		height: 433,
+		border: 0,
+		width: 498,
+		plugins: [
+			"advlist autolink lists link image charmap print preview anchor",
+			"searchreplace visualblocks code fullscreen",
+			"insertdatetime media table paste imagetools wordcount"
+		],
+		toolbar: "insertfile undo redo | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link image",
+		// imagetools_cors_hosts: ['www.tinymce.com', 'codepen.io'],
+		content_css: [
+			'//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+			'//www.tinymce.com/css/codepen.min.css'
+		]
+	});
 });

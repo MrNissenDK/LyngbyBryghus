@@ -129,6 +129,27 @@ body {
 /*NAV SLUT*/
 
 
+/*SOCIAL LINKS*/
+.sociallinks {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1029;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+    .sociallinks a {
+        color: white;
+        font-size: 16px;
+    }
+
+        .sociallinks a:hover {
+            color: white;
+        }
+
+
 /*FOOTER START*/
 #footer {
     position: absolute;
@@ -178,7 +199,6 @@ p {
 
 /*SCROLLBAR START*/
 ::-webkit-scrollbar {
-    width: 9px;
     height: 9px;
 }
 
@@ -190,7 +210,7 @@ p {
 ::-webkit-scrollbar-thumb {
     background: #a65958;
     border: 0px none #000000;
-    border-radius: 8px;
+    border-radius: 0 0 8px 8px;
 }
 
     ::-webkit-scrollbar-thumb:hover {

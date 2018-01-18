@@ -26,7 +26,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
             <h2 class="Order-SubscriptionTitle">@Html.Raw(Model["Pages"]["/Product/Order"]["Subscription"]["Title"])</h2>
-            <a data-jPath="['Pages']['/Product/Order'][''Subscription']['Title']" data-target=".Order-SubscriptionTitle" class="Edit">Rediger</a>
+            <a data-jPath="['Pages']['/Product/Order']['Subscription']['Title']" data-target=".Order-SubscriptionTitle" class="Edit">Rediger</a>
             <p class="paddingB20">
                 @Html.Raw(Model["Pages"]["/Product/Order"]["Subscription"]["Info"])
             </p>
@@ -42,11 +42,12 @@
             <img src="~/Images/ContentImage/order3.jpg" class="img-responsive" />
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
-            <h2>Send en gavepakke</h2>
-            <p class="paddingB20">
-                Overrask et familiemedlem eller ven, ved at bestille en af denne
-                <br/>måneds pakkeløsninger.
+            <h2 class="Package-title">@Html.Raw(Model["Pages"]["/Product/Order"]["Package"]["Title"])</h2>
+            <a data-jPath="['Pages']['/Product/Order']['Package']['Title']" data-target=".Package-title" class="Edit">Rediger</a>
+            <p class="paddingB20 Package-info">
+                @Html.Raw(Model["Pages"]["/Product/Order"]["Package"]["Info"])
             </p>
+            <a data-jPath="['Pages']['/Product/Order']['Package']['Info']" data-target=".Package-info" class="Edit">Rediger</a>
             <a href="/Product/Package/" class="btn btn-custom">Gå til bestilling</a>
         </div>
     </div>

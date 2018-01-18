@@ -26,54 +26,18 @@
 			});
 		}
 	});
+
+
+
+	$("a.Edit").click(function (e) {
+		e.preventDefault();
+		let ancher = $(this);
+		let value = $(ancher.attr("data-target"));
+
+		let newValue = prompt("Enter ny værdi", value.html());
+		value.html(newValue);
+		$.post("/Home/update", { jPath: ancher.attr("data-jPath"), value: newValue }).done(function (data) {
+			console.log(data);
+		});
+	})
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//MENUEN skifter farve, når det er aktiv  START
-// this will get the full URL at the address bar
-//var url = window.location.href;
-
-// passes on every element with a class ".link"
-//$(".link").each(function () {
-    // checks if its the same on the address bar
-   // if (url == (this.href)) {
-       // $(this).closest(".MT").addClass("active");
-   // }
-//});
-//MENUEN skifter farve, når det er aktiv  SLUT

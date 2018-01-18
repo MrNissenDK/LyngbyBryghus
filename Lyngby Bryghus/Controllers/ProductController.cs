@@ -6,7 +6,8 @@ using System.Web.Mvc;
 using Repos.Factories;
 using Repos.Models;
 using Lyngby_Bryghus.ViewModels;
-
+using Newtonsoft.Json.Linq;
+using Lyngby_Bryghus.Helpers;
 namespace Lyngby_Bryghus.Controllers
 {
     public class ProductController : Controller
@@ -15,6 +16,7 @@ namespace Lyngby_Bryghus.Controllers
         CategoryFac CF = new CategoryFac();
         PackageFac PaF = new PackageFac();
         SubscriptionFac SF = new SubscriptionFac();
+        FileTool FT = new FileTool();
 
         // GET: Product
         public ActionResult Index()

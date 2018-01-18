@@ -4,11 +4,11 @@
       "Title": "VELKOMMEN TIL LYNGBY BRYGHUS",
       "Introduction": "Lyngby Bryghus er et mikro bryggeri placeret midt på Djursland. Lyngby Bryghus har brygget og solgt øl fra deres gårdbutik de sidste par år.  sådan",
       "Subscription": {
-        "Title": "Månedlig abonnement",
+        "Title": "Månedlig kageabonnement",
         "Info": "Sammensæt dit eget sortiment og <br/> få leveret øllen lige til døren"
       },
       "Package": {
-        "Title": "Send en gave",
+        "Title": "Send en kage",
         "Info": "Overrask et familiemedlem eller en ven. <br/> Her kan du vælge en af vores pakker."
       }
     }

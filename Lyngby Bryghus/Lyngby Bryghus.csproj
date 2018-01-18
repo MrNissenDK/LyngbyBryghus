@@ -263,6 +263,7 @@
     <Compile Include="Helper\FileTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\HomeView.cs" />
+    <Compile Include="ViewModels\PackageView.cs" />
     <Compile Include="ViewModels\ProductsView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -340,7 +341,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ServerData\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Repository\Repository.csproj">

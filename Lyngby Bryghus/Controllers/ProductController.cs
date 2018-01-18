@@ -39,7 +39,13 @@ namespace Lyngby_Bryghus.Controllers
 
         public ActionResult Package()
         {
-            return View(PaF.GetAllPakage());
+            PackageView PaV = new PackageView
+            {
+                Packages = PaF.GetAllPakage(),
+                json = JObject.Parse(FT.LoadFile(Request.PhysicalApplicationPath + "/ServerData/Pages.json"))
+
+            };
+            return View(PaV);
         }
 
         public ActionResult Subscription()

@@ -28,6 +28,24 @@
 	});
 
 
+	tinymce.init({
+		selector: '#Editor textarea',
+		height: 433,
+		border: 0,
+		width: 498,
+		verify_html: false,
+		plugins: [
+			"advlist autolink lists link image charmap print preview anchor",
+			"searchreplace visualblocks code fullscreen",
+			"insertdatetime media table paste imagetools wordcount"
+		],
+		toolbar: "insertfile undo redo | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link image",
+		// imagetools_cors_hosts: ['www.tinymce.com', 'codepen.io'],
+		content_css: [
+			'//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+			'//www.tinymce.com/css/codepen.min.css'
+		]
+	});
 
 	let value;
 	$("a.Edit").click(function (e) {
@@ -41,24 +59,9 @@
 
 		Editor.find("form input[name=jPath]").val(jPath);
 		Editor.find("form .Title").val(title);
-		Editor.find("form textarea").val(value.html());
 
-	});
-	tinymce.init({
-		selector: 'textarea',
-		height: 433,
-		border: 0,
-		width: 498,
-		plugins: [
-			"advlist autolink lists link image charmap print preview anchor",
-			"searchreplace visualblocks code fullscreen",
-			"insertdatetime media table paste imagetools wordcount"
-		],
-		toolbar: "insertfile undo redo | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link image",
-		// imagetools_cors_hosts: ['www.tinymce.com', 'codepen.io'],
-		content_css: [
-			'//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
-			'//www.tinymce.com/css/codepen.min.css'
-		]
+
+		tinymce.activeEditor.execCommand('mceInsertContent', false, value[0].outerHTML);
+
 	});
 });

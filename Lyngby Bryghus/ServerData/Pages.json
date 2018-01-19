@@ -1,15 +1,15 @@
 ﻿{
   "Pages": {
     "/Home/Index": {
-      "Title": "VELKOMMEN TIL LYNGBY BRYGHUS",
-      "Introduction": "Lyngby Bryghus er et mikro bryggeri placeret midt på Djursland. Lyngby Bryghus har brygget og solgt øl fra deres gårdbutik de sidste par år.  sådan",
+      "Title": "<p>VELKOMMEN TIL LYNGBY BRYGHUS</p>",
+      "Introduction": "<p>Lyngby Bryghus er et mikro bryggeri placeret midt p&aring; Djursland. Lyngby Bryghus har brygget og solgt &oslash;l fra deres g&aring;rdbutik de sidste par &aring;r. s&aring;dan</p>",
       "Subscription": {
-        "Title": "",
-        "Info": "Sammensæt dit eget sortiment og <br/> få leveret øllen lige til døren"
+        "Title": "<h1>0oihiy</h1>",
+        "Info": "<p>Sammens&aelig;t dit eget sortiment og&nbsp;<br />f&aring; leveret &oslash;llen lige til d&oslash;ren</p>\r\n<h3>aefsg</h3>"
       },
       "Package": {
-        "Title": "Send en kage",
-        "Info": "Overrask et familiemedlem eller en ven. <br/> Her kan du vælge en af vores pakker."
+        "Title": "<h2 class=\"Package-title\">Send en kage</h2>",
+        "Info": "<p class=\"Package-info\">Overrask et familiemedlem eller en ven.&nbsp;<br />Her kan du v&aelig;lge en af vores pakker.</p>"
       }
     },
     "/Product/Index": {

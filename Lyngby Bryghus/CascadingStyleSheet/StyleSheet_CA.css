@@ -37,6 +37,9 @@ body {
     vertical-align: top;
     left: 0;
 }
+.navbar-header{
+    height:60px;
+}
 
 .navbar-brand {
     position: relative;
@@ -539,6 +542,30 @@ figure img {
 
 
 /*Media*/
+@media (max-width: 399px){
+    .visible-mikro{
+        display:block !important;
+    }
+    .hidden-mikro{
+        visibility:hidden;
+    }
+}
+
+@media (min-width:400px){
+    .hiddenAfterMikro{
+        visibility:hidden;
+    }
+
+}
+
+@media (min-width: 400px) and (max-width: 442px){
+    .visible-xxs{
+        display:block !important;
+    }
+}
+
+
+
 @media (min-width: 677px) and (max-width: 768px) {
 
     #product-section figure img, #product-all figure img, #product-details figure img {

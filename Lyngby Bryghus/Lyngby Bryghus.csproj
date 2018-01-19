@@ -118,6 +118,9 @@
     <Content Include="Images\ContentImage\order3.jpg" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Images\headerbackground.svg" />
+    <Content Include="Images\logo-lilleMobile.svg" />
+    <Content Include="Images\logo-mikro.svg" />
+    <Content Include="Images\logo-mobile.svg" />
     <Content Include="Images\logo.svg" />
     <Content Include="Images\logolille.svg" />
     <Content Include="Images\ProductAllImages\1.jpg" />

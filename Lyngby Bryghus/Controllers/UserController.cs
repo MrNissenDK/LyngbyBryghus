@@ -11,10 +11,12 @@ using System.IO;
 
 namespace Lyngby_Bryghus.Controllers
 {
+    [Authorize]
     public class UserController : Controller
     {
         UserFac uf = new UserFac();
         // GET: Admin
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();
@@ -26,7 +28,7 @@ namespace Lyngby_Bryghus.Controllers
         public ActionResult LogInResult()
         {
             string Username = Request["Username"].Trim();
-            string Password = Crypto.Hash(Request["Password"].Trim());
+            string Password = Request["Password"].Trim();
             User a = uf.Login(Username, Password);
 
             if (a.ID > 0)

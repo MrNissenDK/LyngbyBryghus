@@ -30,7 +30,7 @@
 
 	tinymce.init({
 		selector: '#Editor textarea',
-		height: 433,
+		height: 467,
 		border: 0,
 		width: 498,
 		verify_html: false,
@@ -58,7 +58,7 @@
 		value = $(ancher.attr("data-target"));
 
 		Editor.find("form input[name=jPath]").val(jPath);
-		Editor.find("form .Title").val(title);
+		Editor.find("form .Title").text(title);
 
 
 		tinymce.activeEditor.execCommand('mceInsertContent', false, value[0].outerHTML);

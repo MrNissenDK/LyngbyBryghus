@@ -13,7 +13,7 @@ namespace Repos.Factories
     {
         public User Login(string email, string password)
         {
-            string sql = "SELECT * From Users Where Email=@Username AND Password=@Password";
+            string sql = "SELECT * From [User] Where Email=@Username AND Password=@Password";
             using (SqlCommand cmd = new SqlCommand(sql, Conn.CreateConnection()))
             {
                 cmd.Parameters.AddWithValue("@Username", email);

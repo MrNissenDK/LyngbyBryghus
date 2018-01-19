@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Repos.Factories;
+using Repos.Models;
 using System.Web.Helpers;
 using System.Web.Security;
 using System.IO;
@@ -26,9 +27,7 @@ namespace Lyngby_Bryghus.Controllers
         {
             string Username = Request["Username"].Trim();
             string Password = Crypto.Hash(Request["Password"].Trim());
-            UserLogin a = af.LogIn(Username, Password);
-
-
+            User a = uf.Login(Username, Password);
 
             if (a.ID > 0)
             {

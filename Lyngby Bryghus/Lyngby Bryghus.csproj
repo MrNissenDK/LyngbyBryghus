@@ -334,6 +334,8 @@
     <Content Include="CascadingStyleSheet\font-awesome-4.7.0\scss\_screen-reader.scss" />
     <Content Include="CascadingStyleSheet\font-awesome-4.7.0\scss\_stacked.scss" />
     <Content Include="CascadingStyleSheet\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Home.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -343,7 +345,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Repository\Repository.csproj">

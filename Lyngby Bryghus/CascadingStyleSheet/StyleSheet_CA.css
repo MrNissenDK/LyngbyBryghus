@@ -138,12 +138,14 @@ body {
     color: white;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.76);
+    line-height: initial;
 }
 
-    .sociallinks a {
+    .sociallinks a {     
         color: white;
-        font-size: 16px;
+        font-size: 18px;
     }
+
 
         .sociallinks a:hover {
             color: white;

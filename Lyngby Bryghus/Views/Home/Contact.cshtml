@@ -1,4 +1,5 @@
-﻿
+﻿@using Newtonsoft.Json.Linq
+@model JObject
 @{
     ViewBag.Title = "Contact";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
@@ -14,13 +15,13 @@
 <div style="max-width: 960px;" class="container" id="contactpage">
     <div class="row">
         <div class="col-lg-6">
-            <h2>Kontakt os</h2>
+            <h2 class=".Contact-title">@Html.Raw(Model["Pages"]["/Home/Contact"]["Title"])</h2><a data-jPath="['Pages']['/Home/Contact']['Title']" data-target=".Contact-title" data-Title="Kontakt Title" class="Edit">Rediger</a>
             <ul>
-                <li>Lyngby Bryghus</li>
-                <li>Svinget 2</li>
-                <li>8570, Trustrup</li>
-                <li>contact@lbh.dk</li>
-                <li>+ 45 43 24 54 23</li>
+                <li><span class=".Contact-name">@Html.Raw(Model["Pages"]["/Home/Contact"]["Name"])</span> <a data-jPath="['Pages']['/Home/Contact']['Name']" data-target=".Contact-name" data-Title="Kontakt Navn" class="Edit">Rediger</a></li>
+                <li><span class=".Contact-address">@Html.Raw(Model["Pages"]["/Home/Contact"]["Address"])</span> <a data-jPath="['Pages']['/Home/Contact']['Address']" data-target=".Contact-address" data-Title="Kontakt Adresse" class="Edit">Rediger</a></li>
+                <li><span class=".Contact-city">@Html.Raw(Model["Pages"]["/Home/Contact"]["City"])</span> <a data-jPath="['Pages']['/Home/Contact']['City']" data-target=".Contact-city" data-Title="Kontakt By" class="Edit">Rediger</a></li>
+                <li><span class=".Contact-mail">@Html.Raw(Model["Pages"]["/Home/Contact"]["Mail"])</span> <a data-jPath="['Pages']['/Home/Contact']['Mail']" data-target=".Contact-mail" data-Title="Kontakt E-mail" class="Edit">Rediger</a></li>
+                <li><span class=".Contact-phone">@Html.Raw(Model["Pages"]["/Home/Contact"]["Phone"])</span> <a data-jPath="['Pages']['/Home/Contact']['Phone']" data-target=".Contact-phone" data-Title="Kontakt Telefonnummer" class="Edit">Rediger</a></li>
             </ul>
         </div>
         <div class="col-lg-6">

@@ -35,6 +35,14 @@
     "/Product/Subscription": {
       "Title": "<p>V&aelig;lg et abonnement</p>",
       "Info": "<p>snsnsn</p>"
+    },
+    "/Home/Contact": {
+      "Title": "Kontakt os",
+      "Name": "<p>kagekage</p>",
+      "Address": "<p>Svinget 3</p>",
+      "City": "<p>Kageby</p>",
+      "Mail": "<p>kage</p>",
+      "Phone": "<p>kage</p>"
     }
   }
 }

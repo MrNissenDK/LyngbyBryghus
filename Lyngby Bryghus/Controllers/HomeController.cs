@@ -38,7 +38,7 @@ namespace Lyngby_Bryghus.Controllers
 
         public ActionResult Contact()
         {
-            return View();
+            return View(JObject.Parse(FT.LoadFile(Request.PhysicalApplicationPath + "/ServerData/Pages.json")));
         }
 
         public ActionResult Details()

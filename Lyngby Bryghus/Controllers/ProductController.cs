@@ -50,7 +50,14 @@ namespace Lyngby_Bryghus.Controllers
 
         public ActionResult Subscription()
         {
-            return View(SF.GetAll());
+            SubscriptionView SuV = new SubscriptionView
+            {
+                Subscriptions = SF.GetAll(),
+                json = JObject.Parse(FT.LoadFile(Request.PhysicalApplicationPath + "/ServerData/Pages.json"))
+
+            };
+
+            return View(SuV);
         }
 
         public ActionResult Order()

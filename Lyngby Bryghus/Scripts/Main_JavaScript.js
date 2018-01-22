@@ -42,8 +42,9 @@
 		toolbar: "insertfile undo redo | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link image",
 		// imagetools_cors_hosts: ['www.tinymce.com', 'codepen.io'],
 		content_css: [
-			'//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
-			'//www.tinymce.com/css/codepen.min.css'
+			'/bootstrap-3.3.7-dist/css/bootstrap.min.css',
+			'/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css',
+			'/CascadingStyleSheet/font-awesome-4.7.0/css/font-awesome.css'
 		]
 	});
 
@@ -61,7 +62,11 @@
 		Editor.find("form .Title").text(title);
 
 
-		tinymce.activeEditor.execCommand('mceInsertContent', false, value[0].outerHTML);
+		tinymce.activeEditor.execCommand('mceSetContent', true, value[0].outerHTML);
 
+	});
+	$("#Editor > form > button.close-button").click(function (e) {
+		let Editor = $("#Editor");
+		Editor.hide();
 	});
 });

@@ -175,6 +175,7 @@
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\likebutton.js" />
     <Content Include="Scripts\Main_JavaScript.js" />
+    <Content Include="Scripts\nav_JavaScript.js" />
     <Content Include="Scripts\tinymce\jquery.tinymce.min.js" />
     <Content Include="Scripts\tinymce\license.txt" />
     <Content Include="Scripts\tinymce\plugins\advlist\plugin.min.js" />

@@ -54,7 +54,7 @@ body {
 .navbar-default {
     height: 60px;
     margin-bottom: 0 !important;
-    background-color: #a65958 !important;
+    /*background-color: #a65958 !important;*/
     border: none !important;
     background-image: none;
     font-size: 0.9em;
@@ -118,17 +118,31 @@ body {
     box-shadow: none;
 }
 
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-    background-color: #a65958;
-    border-color: #a65958 !important;
-}
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
     background-color: #a65958 !important;
 }
+
+.opaque-navbar {
+    background-color:#a65958;
+  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+    height: 60px;
+    border-bottom: 0px;
+    transition: background-color .1s ease 0s;
+    transition-duration: 1s;
+}
+
+.opaque-navbar.opaque {
+    background-color:#333;
+    height: 60px;
+    transition: background-color .1s ease 0s;
+    transition-duration: 2s;
+}
+
+
+
 /*NAV SLUT*/
 
 
@@ -422,7 +436,7 @@ a {
 figcaption {
     position: absolute;
     bottom: 0;
-    background-color: #222;
+    background-color: #333;
     min-height: 13%;
     width: 100%;
     text-align: center;
@@ -660,6 +674,11 @@ figure img {
 
     #product-details {
     }
+    .navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    background-color: #a65958;
+    border-color: #a65958 !important;
+}
 }
 
 @media (min-width: 767px) and (max-width: 841px) {

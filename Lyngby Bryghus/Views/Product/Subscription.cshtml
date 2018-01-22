@@ -9,9 +9,9 @@
 <div class="container" id="subscription-view">
     <div class="row paddingT20">
         <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center text-uppercase Subscription-title">@Html.Raw(Model.json["Pages"]["/Product/Subscription"]["Title"])</h2>
-        <a data-jPath="['Pages']['/Product/Subscription']['Title']" data-target=".Subscription-title" data-Title="Abonnement Overskrift" class="Edit">Rediger</a>
+        <a data-jPath="['Pages']['/Product/Subscription']['Title']" data-target=".Subscription-title" data-Title="Abonnement Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-cog"></span> Rediger</a>
         <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-wrapper paddingB20">@Html.Raw(Model.json["Pages"]["/Product/Subscription"]["Info"])</p>
-        <a data-jPath="['Pages']['/Product/Subscription']['Info']" data-target=".Subscription-info" data-Title="Abonnement info" class="Edit">Rediger</a>
+        <a data-jPath="['Pages']['/Product/Subscription']['Info']" data-target=".Subscription-info" data-Title="Abonnement info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-cog"></span> Rediger</a>
     </div>
     <div class="row">
         @foreach (Subscription sub in Model.Subscriptions)

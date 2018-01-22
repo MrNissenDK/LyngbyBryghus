@@ -10,11 +10,11 @@
     <header class="row">
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
             <h2 class="Product-title">@Html.Raw(Model.json["Pages"]["/Product/Index"]["Title"])</h2>
-            <a data-jPath="['Pages']['/Product/Index']['Title']" data-target=".Product-title" data-Title="Produkt Overskrift" class="Edit">Rediger</a>
+            <a data-jPath="['Pages']['/Product/Index']['Title']" data-target=".Product-title" data-Title="Produkt Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-cog"></span> Rediger</a>
             <p class="Product-info">
                 @Html.Raw(Model.json["Pages"]["/Product/Index"]["Info"])
             </p>
-            <a data-jPath="['Pages']['/Product/Index']['Info']" data-target=".Product-info" data-Title="Produkt info" class="Edit">Rediger</a>
+            <a data-jPath="['Pages']['/Product/Index']['Info']" data-target=".Product-info" data-Title="Produkt info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-cog"></span> Rediger</a>
         </div>
 
 

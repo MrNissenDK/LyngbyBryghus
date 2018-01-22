@@ -288,7 +288,6 @@
     <Content Include="CascadingStyleSheet\RalewayFont\Raleway-Regular.ttf" />
     <Content Include="CascadingStyleSheet\RalewayFont\Raleway-Light.ttf" />
     <None Include="bundleconfig.json" />
-    <Content Include="Views\Home\Order.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />

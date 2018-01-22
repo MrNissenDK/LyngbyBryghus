@@ -514,6 +514,40 @@ figure img {
         background-color: #ededed;
         border-color: #f0f0f0;
     }
+
+/*Edit-knap*/
+.btn-edit {
+    color: #000;
+    background-color: #75BBA7;
+    border-color: #63b059;
+    padding: 4px;
+    border-radius: 0;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    font-weight: 500;
+    z-index: 0;
+}
+
+.btn-edit:focus,
+.btn-edit.focus {
+    color: #000;
+    background-color: #f6f6f6;
+    border-color: #f0f0f0;
+}
+
+.btn-edit:hover {
+    color: #000;
+    background-color: #ededed;
+    border-color: #f0f0f0;
+}
+
+.btn-edit:active,
+.btn-edit.active,
+.open > .dropdown-toggle.btn-custom {
+    color: #000;
+    background-color: #ededed;
+    border-color: #f0f0f0;
+}
 /*KNAPPER START*/
 
 

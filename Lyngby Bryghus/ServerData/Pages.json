@@ -18,31 +18,31 @@
     },
     "/Product/Order": {
       "Title": "<h2 class=\"Order-title\">Bestil enkelt eller flere kager</h2>",
-      "Info": "Ønsker du ikke at købe en KÆMPE kage!!, er det også muligt at ringe og bestille enkelt eller flere på: @ = % ? + 45 43 24 54 23 eller giv os besked ved at trykke her:",
+      "Info": "<p class=\"paddingB20 Order-info\">&Oslash;nsker du ikke at k&oslash;be en K&AElig;MPE kage!!, er det ogs&aring; muligt at ringe og bestille enkelt eller flere p&aring;: @ = % ? + 45 43 24 54 23 eller giv os besked ved at trykke her:</p>",
       "Subscription": {
-        "Title": "Køb et abonnement",
-        "Info": "Få en månedlig overraskelse ved at købe abonnement hos Lyngby Bryghus. Hvert måned bliver der dannet en pakke med tilfældige øl"
+        "Title": "<h2 class=\"Order-SubscriptionTitle\">K&oslash;b et abonnement</h2>",
+        "Info": "<p class=\"Order-Info paddingB20\">F&aring; en m&aring;nedlig overraskelse ved at k&oslash;be abonnement hos Lyngby Bryghus. Hvert m&aring;ned bliver der dannet en pakke med tilf&aelig;ldige &oslash;l</p>"
       },
       "Package": {
-        "Title": "Send en KAGE",
-        "Info": "KAGEOverrask et familiemedlem eller ven, ved at bestille en af denne måneds pakkeløsninger.\r\n            "
+        "Title": "<h2 class=\"Package-title\">Send en KAGE</h2>",
+        "Info": "<p class=\"paddingB20 Package-info\">KAGEOverrask et familiemedlem eller ven, ved at bestille en af denne m&aring;neds pakkel&oslash;sninger.</p>"
       }
     },
     "/Product/Package": {
-      "Title": "<p>hejejejejjeje</p>",
-      "Info": "<p>Hej med dig</p>"
+      "Title": "<h2 class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center text-uppercase Package-title\" style=\"text-align: center;\">hejejejejjeje</h2>",
+      "Info": "<p class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 text-wrapper paddingB20 Package-info\" style=\"text-align: left;\">Hej med dig</p>"
     },
     "/Product/Subscription": {
-      "Title": "<p>V&aelig;lg et abonnement</p>",
-      "Info": "<p>snsnsn</p>"
+      "Title": "<h2 class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center text-uppercase Subscription-title\">V&aelig;lg et abonnement</h2>",
+      "Info": "<p class=\"Subscription-info col-lg-12 col-md-12 col-sm-12 col-xs-12 text-wrapper paddingB20\">snsnsn</p>"
     },
     "/Home/Contact": {
-      "Title": "Kontakt os",
-      "Name": "<p>kagekage</p>",
-      "Address": "<p>Svinget 3</p>",
-      "City": "<p>Kageby</p>",
-      "Mail": "<p>kage</p>",
-      "Phone": "<p>kage</p>"
+      "Title": "<h2 class=\"Contact-title\">Kontakt os</h2>",
+      "Name": "<p class=\"Contact-name\">kagekage</p>",
+      "Address": "<p class=\"Contact-address\">Svinget 3</p>",
+      "City": "<p class=\"Contact-city\">Kageby</p>",
+      "Mail": "<p class=\"Contact-mail\">kage</p>",
+      "Phone": "<p class=\"Contact-phone\">kage</p>"
     }
   }
 }

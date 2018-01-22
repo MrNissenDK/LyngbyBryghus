@@ -11,11 +11,9 @@
             <img src="~/Images/ContentImage/order1.svg" class="img-responsive" />
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
-            <h2 class="Order-title">@Html.Raw(Model["Pages"]["/Product/Order"]["Title"])</h2>
+            @Html.Raw(Model["Pages"]["/Product/Order"]["Title"])
             <a data-jPath="['Pages']['/Product/Order']['Title']" data-target=".Order-title" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
-            <p class="paddingB20 Order-info">
-                @Html.Raw(Model["Pages"]["/Product/Order"]["Info"])
-            </p>
+            @Html.Raw(Model["Pages"]["/Product/Order"]["Info"])
             <a data-jPath="['Pages']['/Product/Order']['Info']" data-target=".Order-info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
             <br />
             <a href="/Home/Contact/" class="btn btn-custom">Kontakt</a>
@@ -26,12 +24,10 @@
             <img src="~/Images/ContentImage/order2.jpg" class="img-responsive" />
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
-            <h2 class="Order-SubscriptionTitle">@Html.Raw(Model["Pages"]["/Product/Order"]["Subscription"]["Title"])</h2>
+            @Html.Raw(Model["Pages"]["/Product/Order"]["Subscription"]["Title"])
             <a data-jPath="['Pages']['/Product/Order']['Subscription']['Title']" data-target=".Order-SubscriptionTitle" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
-            <p class="paddingB20">
-                @Html.Raw(Model["Pages"]["/Product/Order"]["Subscription"]["Info"])
-            </p>
-            <a data-jPath="['Pages']['/Product/Order'][''Subscription']['Title']" data-target=".Order-SubscriptionTitle" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
+            @Html.Raw(Model["Pages"]["/Product/Order"]["Subscription"]["Info"])
+            <a data-jPath="['Pages']['/Product/Order']['Subscription']['Info']" data-target=".Order-Info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
             <br />
             <a href="/Product/Subscription/" class="btn btn-custom">Køb abonnement</a>
         </div>
@@ -44,11 +40,9 @@
             <img src="~/Images/ContentImage/order3.jpg" class="img-responsive" />
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
-            <h2 class="Package-title">@Html.Raw(Model["Pages"]["/Product/Order"]["Package"]["Title"])</h2>
+            @Html.Raw(Model["Pages"]["/Product/Order"]["Package"]["Title"])
             <a data-jPath="['Pages']['/Product/Order']['Package']['Title']" data-target=".Package-title" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
-            <p class="paddingB20 Package-info">
-                @Html.Raw(Model["Pages"]["/Product/Order"]["Package"]["Info"])
-            </p>
+            @Html.Raw(Model["Pages"]["/Product/Order"]["Package"]["Info"])
             <a data-jPath="['Pages']['/Product/Order']['Package']['Info']" data-target=".Package-info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
             <br/>
             <a href="/Product/Package/" class="btn btn-custom">Gå til bestilling</a>

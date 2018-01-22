@@ -518,12 +518,15 @@ figure img {
 /*Edit-knap*/
 .btn-edit {
     color: #000;
-    background-color: #75BBA7;
+    /*background-color: #75BBA7;
+    border-color: #63b059;*/
+    background-color: #66dd6d;
     border-color: #63b059;
-    padding: 4px;
+    padding: 4px 6px;
+    margin-bottom:10px;
     border-radius: 0;
-    font-size: 0.8em;
-    letter-spacing: 2px;
+    font-size: 0.7em;
+    letter-spacing: 1px;
     font-weight: 500;
     z-index: 0;
 }

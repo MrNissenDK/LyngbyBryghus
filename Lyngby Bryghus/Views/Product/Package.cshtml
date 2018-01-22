@@ -11,9 +11,9 @@
     <div class="row paddingT20">
         <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center text-uppercase Package-title">@Html.Raw(Model.json["Pages"]["/Product/Package"]["Title"])</h2>
         <br/>
-        <a data-jPath="['Pages']['/Product/Package']['Title']" data-target=".Package-title" data-Title="Pakke Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-cog"></span> Rediger</a>
+        <a data-jPath="['Pages']['/Product/Package']['Title']" data-target=".Package-title" data-Title="Pakke Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
         <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-wrapper paddingB20 Package-info">@Html.Raw(Model.json["Pages"]["/Product/Package"]["Info"])</p>
-        <a data-jPath="['Pages']['/Product/Package']['Info']" data-target=".Package-info" data-Title="Pakke Info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-cog"></span> Rediger</a>
+        <a data-jPath="['Pages']['/Product/Package']['Info']" data-target=".Package-info" data-Title="Pakke Info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
         </div>
     <div class="row">
         @foreach (Package package in Model.Packages)

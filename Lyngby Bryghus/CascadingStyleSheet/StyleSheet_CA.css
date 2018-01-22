@@ -37,6 +37,7 @@ body {
     vertical-align: top;
     left: 0;
 }
+
 .navbar-header{
     height:60px;
 }
@@ -129,6 +130,7 @@ body {
 .navbar-default .navbar-nav > .open > a:focus {
     background-color: #a65958 !important;
 }
+
 /*NAV SLUT*/
 
 

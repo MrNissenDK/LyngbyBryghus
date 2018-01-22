@@ -37,6 +37,7 @@ body {
     vertical-align: top;
     left: 0;
 }
+
 .navbar-header{
     height:60px;
 }
@@ -140,9 +141,6 @@ body {
     transition: background-color .1s ease 0s;
     transition-duration: 2s;
 }
-
-
-
 
 
 

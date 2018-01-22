@@ -16,7 +16,7 @@
         <section class="col-lg-4 col-md-4 col-sm-offset-0 col-sm-6 col-xs-offset-3 col-xs-6 product-image">
             <a href="#">
                 <figure>
-                    <img src="~/Images/ProductAllImages/Small/BrunUgle.png" class="img-responsive"  type="button" data-toggle="modal" data-target="#myModal"  />
+                    <img src="~/Images/ProductAllImages/Small/@Model.Image" class="img-responsive"  type="button" data-toggle="modal" data-target="#myModal"  />
                     <figcaption>Pris: @Model.Price kr</figcaption>
                 </figure>
                 
@@ -63,7 +63,7 @@
                     <h4 class="modal-title">@Model.Name</h4>
                 </div>
                 <div class="modal-body">
-                    <img src="~/Images/ProductAllImages/Big/BrunUgle.png" />
+                    <img src="~/Images/ProductAllImages/Big/@Model.Image" class="img-responsive"/>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-custom" data-dismiss="modal">Luk</button>

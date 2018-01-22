@@ -13,11 +13,11 @@
       }
     },
     "/Product/Index": {
-      "Title": "ALLE KAGERNE er spist!",
+      "Title": "<h2 class=\"Product-title\">Dennis' mor er en kage!</h2>",
       "Info": "dhdhdhdhdhd"
     },
     "/Product/Order": {
-      "Title": "Bestil enkelt eller flere kager",
+      "Title": "<h2 class=\"Order-title\">Bestil enkelt eller flere kager</h2>",
       "Info": "Ønsker du ikke at købe en KÆMPE kage!!, er det også muligt at ringe og bestille enkelt eller flere på: @ = % ? + 45 43 24 54 23 eller giv os besked ved at trykke her:",
       "Subscription": {
         "Title": "Køb et abonnement",

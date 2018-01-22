@@ -388,18 +388,18 @@ img {
 #logocontainer div:first-child {
     z-index: 1;
     position: absolute;
-    background-color: #f6f6f6;
+    background-color: white;
     width: 300px;
     height: 44px;
     margin: 0 auto;
     left: 50%;
     bottom: 3px;
-    transform: translate(-50%, -50%) skew(-30deg);
+    transform: translate(-50%, -50%) skew(-20deg);
 }
 
 #logocontainer div img {
     margin: 0 auto;
-    -webkit-transform: skew(30deg);
+    -webkit-transform: skew(20deg);
     display: block;
 }
 

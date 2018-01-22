@@ -57,12 +57,15 @@
     <section class="row paddingB20" id="welcome-section">
         <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12 text-center">
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Title"])
-            @if (Session["User"] == null || (int)Session["role"] < 10)
+            @if (!(Session["User"] == null || (int)Session["role"] < 10))
             {
                 <a data-jPath="['Pages']['/Home/Index']['Title']" data-target=".Head-Title" data-Title="Overskrift" class="Edit">Rediger</a>
             }
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Introduction"])
-            <a data-jPath="['Pages']['/Home/Index']['Introduction']" data-target=".Head-Introduction" data-Title="Introduktion" class="Edit">Rediger</a>
+            @if (!(Session["User"] == null || (int)Session["role"] < 10))
+            {
+                <a data-jPath="['Pages']['/Home/Index']['Introduction']" data-target=".Head-Introduction" data-Title="Introduktion" class="Edit">Rediger</a>
+            }
         </div>
     </section>
 </div>

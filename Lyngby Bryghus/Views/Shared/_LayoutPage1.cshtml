@@ -104,7 +104,13 @@
 					max-width: 100%;
 					max-height: 95%;
 				}
-				#Editor > form > button {
+				#Editor > form > button.close-button {
+					z-index: 1;
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
+				#Editor > form > button.save-button {
 					z-index: 1;
 					position: absolute;
 					bottom: 0;
@@ -117,9 +123,12 @@
 	<div id="Editor" style="display:none;">
 		<form name="Editor" action="/Home/update" method="post">
 			<label class="Title">Title</label>
+			<button class="close-button" type="button">
+				<i class="fa fa-times"></i>
+			</button>
 			<input type="hidden" name="jPath" />
 			<textarea name="value"></textarea>
-			<button>save</button>
+			<button class="save-button" type="submit">save</button>
 		</form>
 	</div>
 

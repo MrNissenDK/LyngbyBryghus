@@ -31,7 +31,7 @@
 
                     <div class="item">
                         <img src="~/Images/SliderImage/sliderimage1.jpg" />
-                        
+
                     </div>
 
                     <div class="item">
@@ -57,9 +57,12 @@
     <section class="row paddingB20" id="welcome-section">
         <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12 text-center">
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Title"])
-			<a data-jPath="['Pages']['/Home/Index']['Title']" data-target=".Head-Title" data-Title="Overskrift" class="Edit">Rediger</a>
+            @if (Session["User"] == null || (int)Session["role"] < 10)
+            {
+                <a data-jPath="['Pages']['/Home/Index']['Title']" data-target=".Head-Title" data-Title="Overskrift" class="Edit">Rediger</a>
+            }
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Introduction"])
-			<a data-jPath="['Pages']['/Home/Index']['Introduction']" data-target=".Head-Introduction" data-Title="Introduktion" class="Edit">Rediger</a>
+            <a data-jPath="['Pages']['/Home/Index']['Introduction']" data-target=".Head-Introduction" data-Title="Introduktion" class="Edit">Rediger</a>
         </div>
     </section>
 </div>
@@ -96,23 +99,23 @@
                 <p>@ev.Name - @ev.Date.ToShortDateString()</p>
             }
 
-            <a href="#" class="btn btn-custom"  type="button" data-toggle="modal" data-target="#myModalEvents" >SE ALLE EVENTS</a>
+            <a href="#" class="btn btn-custom" type="button" data-toggle="modal" data-target="#myModalEvents">SE ALLE EVENTS</a>
         </section>
         <section class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Subscription"]["Title"])
             <a data-jPath="['Pages']['/Home/Index']['Subscription']['Title']" data-target=".Subscription-title" data-Title="Abonument title" class="Edit">Rediger</a>
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Subscription"]["Info"])
             <a data-jPath="['Pages']['/Home/Index']['Subscription']['Info']" data-target=".Subscription-info" data-Title="Abonument info" class="Edit">Rediger</a>
-            <br/>
+            <br />
             <a href="/Product/Subscription/" class="btn btn-custom">KØB ABONNEMENT</a>
         </section>
 
         <section class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Package"]["Title"])
-            <a data-jPath="['Pages']['/Home/Index']['Package']['Title']" data-target=".Package-title"  data-Title="Pakke title" class="Edit">Rediger</a>
+            <a data-jPath="['Pages']['/Home/Index']['Package']['Title']" data-target=".Package-title" data-Title="Pakke title" class="Edit">Rediger</a>
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Package"]["Info"])
-            <a data-jPath="['Pages']['/Home/Index']['Package']['Info']" data-target=".Package-info"  data-Title="Pakke info" class="Edit">Rediger</a>
-            <br/>
+            <a data-jPath="['Pages']['/Home/Index']['Package']['Info']" data-target=".Package-info" data-Title="Pakke info" class="Edit">Rediger</a>
+            <br />
             <a href="/Product/Package/" class="btn btn-custom">VÆLG PAKKE</a>
         </section>
     </section>
@@ -129,12 +132,12 @@
             </div>
             <div class="modal-body">
                 @foreach (Event ev in Model.Events)
-                {       
-                    
+                {
+
                     <h3>@ev.Name</h3>
                     <p>@ev.Date.ToShortDateString()</p>
                     <p>@ev.Description</p>
-                    <hr/>
+                    <hr />
 
                 }
 

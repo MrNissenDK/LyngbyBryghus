@@ -55,7 +55,7 @@ body {
 .navbar-default {
     height: 60px;
     margin-bottom: 0 !important;
-    background-color: #a65958 !important;
+    /*background-color: #a65958 !important;*/
     border: none !important;
     background-image: none;
     font-size: 0.9em;
@@ -119,18 +119,12 @@ body {
     box-shadow: none;
 }
 
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-    background-color: #a65958;
-    border-color: #a65958 !important;
-}
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
     background-color: #a65958 !important;
 }
-
 /*NAV SLUT*/
 
 
@@ -423,7 +417,7 @@ a {
 figcaption {
     position: absolute;
     bottom: 0;
-    background-color: #222;
+    background-color: #333;
     min-height: 13%;
     width: 100%;
     text-align: center;
@@ -692,6 +686,11 @@ figure img {
 
     #product-details {
     }
+    .navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    background-color: #a65958;
+    border-color: #a65958 !important;
+}
 }
 
 @media (min-width: 767px) and (max-width: 841px) {

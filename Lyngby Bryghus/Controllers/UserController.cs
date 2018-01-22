@@ -35,6 +35,7 @@ namespace Lyngby_Bryghus.Controllers
             {
                 FormsAuthentication.SetAuthCookie(a.ID.ToString(), false);
                 Session["User"] = Username;
+                Session["Role"] = a.Role;
                 Session.Timeout = 2;
                 if (!string.IsNullOrEmpty(Request.QueryString["ReturnUrl"]))
                 {

@@ -2,6 +2,12 @@
 @using Repos.Models
 @model HomeView
 @{
+    int num = 0;
+    if (Session["role"] != null)
+    {
+        int.TryParse(Session["role"].ToString(), out num);
+    }
+    bool Editor = (num >= 10);
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
@@ -57,12 +63,12 @@
     <section class="row paddingB20" id="welcome-section">
         <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12 text-center">
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Title"])
-            @if (!(Session["User"] == null || (int)Session["role"] < 10))
+            @if (Editor)
             {
                 <a data-jPath="['Pages']['/Home/Index']['Title']" data-target=".Head-Title" data-Title="Overskrift" class="Edit">Rediger</a>
             }
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Introduction"])
-            @if (!(Session["User"] == null || (int)Session["role"] < 10))
+            @if (Editor)
             {
                 <a data-jPath="['Pages']['/Home/Index']['Introduction']" data-target=".Head-Introduction" data-Title="Introduktion" class="Edit">Rediger</a>
             }
@@ -106,18 +112,30 @@
         </section>
         <section class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Subscription"]["Title"])
-            <a data-jPath="['Pages']['/Home/Index']['Subscription']['Title']" data-target=".Subscription-title" data-Title="Abonument title" class="Edit">Rediger</a>
+            @if (Editor)
+            {
+               <a data-jPath="['Pages']['/Home/Index']['Subscription']['Title']" data-target=".Subscription-title" data-Title="Abonument title" class="Edit">Rediger</a>
+            }
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Subscription"]["Info"])
-            <a data-jPath="['Pages']['/Home/Index']['Subscription']['Info']" data-target=".Subscription-info" data-Title="Abonument info" class="Edit">Rediger</a>
+            @if (Editor)
+            {
+                <a data-jPath="['Pages']['/Home/Index']['Subscription']['Info']" data-target=".Subscription-info" data-Title="Abonument info" class="Edit">Rediger</a>
+            }
             <br />
             <a href="/Product/Subscription/" class="btn btn-custom">KØB ABONNEMENT</a>
         </section>
 
         <section class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Package"]["Title"])
-            <a data-jPath="['Pages']['/Home/Index']['Package']['Title']" data-target=".Package-title" data-Title="Pakke title" class="Edit">Rediger</a>
+            @if (Editor)
+            {
+                <a data-jPath="['Pages']['/Home/Index']['Package']['Title']" data-target=".Package-title" data-Title="Pakke title" class="Edit">Rediger</a>
+            }
             @Html.Raw(Model.json["Pages"]["/Home/Index"]["Package"]["Info"])
-            <a data-jPath="['Pages']['/Home/Index']['Package']['Info']" data-target=".Package-info" data-Title="Pakke info" class="Edit">Rediger</a>
+            @if (Editor)
+            {
+                <a data-jPath="['Pages']['/Home/Index']['Package']['Info']" data-target=".Package-info" data-Title="Pakke info" class="Edit">Rediger</a>
+            }
             <br />
             <a href="/Product/Package/" class="btn btn-custom">VÆLG PAKKE</a>
         </section>
@@ -136,7 +154,6 @@
             <div class="modal-body">
                 @foreach (Event ev in Model.Events)
                 {
-
                     <h3>@ev.Name</h3>
                     <p>@ev.Date.ToShortDateString()</p>
                     <p>@ev.Description</p>

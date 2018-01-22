@@ -215,7 +215,6 @@ p {
 ::-webkit-scrollbar-thumb {
     background: #a65958;
     border: 0px none #000000;
-    border-radius: 0 0 8px 8px;
 }
 
     ::-webkit-scrollbar-thumb:hover {
@@ -438,6 +437,37 @@ figure img {
 }
 /*FIGURE, FIGCAPTION, LINK SLUT*/
 
+/*LOGIN SIDE*/
+
+.loginbox {
+    display: table;
+    background-color: #a65958;
+    border-radius: 8px;
+    color: white;
+    margin: 0 auto;
+    margin-top: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.loginbox input {
+    margin-bottom: 10px;
+    color: black;
+}
+
+.loginbox button {
+    color: black;
+}
+
+.loginbox label {
+    font-weight: 100;
+}
+
+.loginbox h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
 /*DIVERSE CLASS START*/
 .margin0 {

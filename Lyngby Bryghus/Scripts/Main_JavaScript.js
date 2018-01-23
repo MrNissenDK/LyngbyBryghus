@@ -5,25 +5,16 @@
 		let Tag = ancher.attr("data-tag");
 		window.history.pushState(null, ancher.attr("href"), ancher.attr("href"));
 		if (Tag === "*") {
-			$("a.gallery_product").css("display", "block");
-			$("a.gallery_product").css("position", "relative");
-			$("a.gallery_product").animate({
-				opacity: 1,
-				display: "block"
-			}, 300);
+			$("a.gallery_product").slideUp(300);
+			setTimeout(function () {
+				$("a.gallery_product").slideDown(300);
+			}, 400);
 		}
 		else {
-			$("[data-tags*=\"" + Tag + "\"]").css("display", "block");
-			$("[data-tags*=\"" + Tag + "\"]").css("position", "relative");
-			$("[data-tags*=\"" + Tag + "\"]").animate({
-				opacity: 1
-			}, 300);
-			$("a.gallery_product:not([data-tags*=\"" + Tag + "\"])").css("position", "absolute");
-			$("a.gallery_product:not([data-tags*=\"" + Tag + "\"])").animate({
-				opacity: 0,
-			}, 300, function () {
-				$(this).css("display","none");
-			});
+			$("a.gallery_product").slideUp(300);
+			setTimeout(function () {
+				$("[data-tags*=\"" + Tag + "\"]").slideDown(300);
+			},400);
 		}
 	});
 	tinymce.init({

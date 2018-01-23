@@ -19,6 +19,20 @@ html {
     height: 100%;
 }
 
+
+.centered {
+    text-align: center;
+}
+
+.orderinfo {
+    margin-top: 4%;
+}
+
+.maintain {
+    max-width: 100%;
+    height: same-as-width;
+}
+
 body {
     position: relative;
     min-height: 100%;
@@ -376,14 +390,9 @@ img {
     color: white;
 }
 
-#order-view div.text-center {
-    padding: 20px 20px 40px 20px;
-}
 
-    #order-view div.text-center > p {
-        font-size: 0.8em;
-        margin-bottom: 0;
-    }
+
+
 /*BESTILLING SLUT*/
 
 /*KONTAKT START*/
@@ -745,9 +754,6 @@ figure img {
 }
 
 @media (min-width: 992px) and (max-width: 1225px) {
-    #order-view div.text-center {
-        padding: 20px;
-    }
 
         #order-view div.text-center > p {
             font-size: 0.7em;
@@ -784,3 +790,4 @@ figure img {
         width: 960px;
     }
 }
+

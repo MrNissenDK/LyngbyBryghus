@@ -2,75 +2,73 @@
 
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Lyngby Bryghus">
-    <meta name="keywords" content="Lyngby, Bryghus, Øl, Mjød, Henrik Obsen">
-    <meta name="author" content="CMD, Henrik Obsen">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title</title>
-    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link href="~/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet" />
-    <link href="~/CascadingStyleSheet/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
-
-
-
-    <link href="~/CascadingStyleSheet/StyleSheet_CA.css" rel="stylesheet" />
+	<meta charset="UTF-8">
+	<meta name="description" content="Lyngby Bryghus">
+	<meta name="keywords" content="Lyngby, Bryghus, Øl, Mjød, Henrik Obsen">
+	<meta name="author" content="CMD, Henrik Obsen">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title</title>
+	<link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link href="~/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="~/CascadingStyleSheet/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+	<link href="~/Scripts/Croppie-2.5.1/croppie.css" rel="stylesheet" />
+	<link href="~/CascadingStyleSheet/StyleSheet_CA.css" rel="stylesheet" />
 </head>
 <body>
 
-    <header class="row">
-        
-        <nav class="navbar navbar-default navbar-fixed-top opaque-navbar">
-            <div class="container-fluid paddingL0">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    
-                    <a href="/Home/Index/">
-                        <h1 class="margin0">
-                            <img src="~/Images/logo-mikro.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive visible-mikro hiddenAfterMikro"/>
-                            <img src="~/Images/logo-lilleMobile.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive visible-xxs hidden-mikro hidden-sm"  />
-                            
-                            <img src="~/Images/logolille.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive visible-sm hidden-xs" />
-                            <img src="~/Images/logo.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive hidden-xs hidden-sm visible-lg visible-md"  />
-                           
-                        </h1>
-                    </a>
-                </div>
+	<header class="row">
+		
+		<nav class="navbar navbar-default navbar-fixed-top opaque-navbar">
+			<div class="container-fluid paddingL0">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+					<a href="/Home/Index/">
+						<h1 class="margin0">
+							<img src="~/Images/logo-mikro.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive visible-mikro hiddenAfterMikro"/>
+							<img src="~/Images/logo-lilleMobile.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive visible-xxs hidden-mikro hidden-sm"  />
+							
+							<img src="~/Images/logolille.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive visible-sm hidden-xs" />
+							<img src="~/Images/logo.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive hidden-xs hidden-sm visible-lg visible-md"  />
+						   
+						</h1>
+					</a>
+				</div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/Home/Index/">Forside</a></li>
-                        <li><a href="/Product/Index/">Produkter</a></li>
-                        <li><a href="/Product/Order/">Bestilling</a></li>
-                        <li><a href="/Home/Contact/">Kontakt</a></li>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/Home/Index/">Forside</a></li>
+						<li><a href="/Product/Index/">Produkter</a></li>
+						<li><a href="/Product/Order/">Bestilling</a></li>
+						<li><a href="/Home/Contact/">Kontakt</a></li>
 
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
 
-    </header>
+	</header>
 
 
-    <div id="main-content">
-        @RenderBody()
-    </div>
-    <div id="footer">
-        <footer class="container-fluid">
-            <section class="row">
-                <h4 class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Lyngby Bryghus. Svinget 2, 8570 Trustrup - contact@lbh.dk - + 45 43 24 54 23 </h4>
-            </section>
-        </footer>
-    </div>
+	<div id="main-content">
+		@RenderBody()
+	</div>
+	<div id="footer">
+		<footer class="container-fluid">
+			<section class="row">
+				<h4 class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Lyngby Bryghus. Svinget 2, 8570 Trustrup - contact@lbh.dk - + 45 43 24 54 23 </h4>
+			</section>
+		</footer>
+	</div>
 
 	<style>
 		#Editor {
@@ -133,9 +131,12 @@
 	</div>
 
 	<script src="~/Scripts/tinymce/tinymce.min.js"></script>
-    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
-    <script src="~/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="~/Scripts/Main_JavaScript.js"></script>
-    <script src="~/Scripts/nav_JavaScript.js"></script>
+	<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+	<script src="~/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="~/Scripts/Main_JavaScript.js"></script>
+	<script src="~/Scripts/nav_JavaScript.js"></script>
+	<script src="~/Scripts/Croppie-2.5.1/croppie.min.js"></script>
+
+	@RenderSection("js", required: false);
 </body>
 </html>

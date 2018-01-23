@@ -1,0 +1,116 @@
+﻿
+@{
+	ViewBag.Title = "addProduct";
+	Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<form>
+	<section class="container paddingT20" id="product-details">
+
+		<header class="row">
+			<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></h2>
+		</header>
+
+		<article class="row row-eq-height paddingB20">
+
+			<section class="col-lg-4 col-md-4 col-sm-offset-0 col-sm-6 col-xs-offset-3 col-xs-6 product-image">
+				<a href="#">
+					<input type="file" accept="image/*" name="Image" />
+					<figure>
+						<div id="cropper">
+
+						</div>
+							@section js{
+								<script>
+									let c = $('#cropper').croppie({
+										viewport: { width: 290, height: 348 },
+										boundary: {
+											width: 290,
+											height: 348
+										},
+										showZoomer: false,
+										update: function () {
+											getResult()
+										},
+									});
+									
+									function getResult(){
+										c.croppie('result', 'canvas').then(function (src) {
+											console.log(src);
+										});
+									}
+									let reader = new FileReader();
+									reader.onloadend = function () {
+										c.croppie("bind", {
+											url: reader.result
+										});
+									}
+									$("input[name='Image']").on('change', function () {
+										reader.readAsDataURL(this.files[0]);
+
+									});
+								</script>
+							}
+						<img src="" class="img-responsive" type="button" data-toggle="modal" data-target="#myModal" />
+					</figure>
+
+				</a>
+			</section>
+
+			<section class="col-lg-8 col-md-8 col-md-6 col-xs-12 product-text">
+
+				<section class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<h3 class="marginT0">Navn</h3>
+						<input type="text" name="Name" />
+						<h3 class="marginT0">På lager</h3>
+						<input type="number" step="any" name="Stock" />
+						<h3 class="marginT0">Pris</h3>
+						<input type="number" step="any" name="Price"/> 
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<h3 class="marginT0">Beskrivelse</h3>
+						<textarea name="Description"></textarea>
+					</div>
+				</section>
+
+
+				<section class="row product-text-last">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<h3>Detalijeret info</h3>
+						<textarea name="Details"></textarea>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<h3>Praktisk Info</h3>
+						<textarea name="Info"></textarea>
+					</div>
+				</section>
+
+				<a href="#" class="btn btn-custom">Se næste</a>
+			</section>
+		</article>
+
+
+	</section>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title"></h4>
+				</div>
+				<div class="modal-body">
+					<img src="~/Images/ProductAllImages/Big/" class="img-responsive" />
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-custom" data-dismiss="modal">Luk</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</form>

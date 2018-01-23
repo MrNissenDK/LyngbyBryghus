@@ -2,19 +2,33 @@
 @using Lyngby_Bryghus.ViewModels
 @model ProductsView
 @{
+    int num = 0;
+    if (Session["role"] != null)
+    {
+        int.TryParse(Session["role"].ToString(), out num);
+
+    }
+    bool Editor = (num >= 10);
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
+
 <section class="container paddingT20" id="product-all">
     <header class="row">
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-            <h2 class="Product-title">@Html.Raw(Model.json["Pages"]["/Product/Index"]["Title"])</h2>
-            <a data-jPath="['Pages']['/Product/Index']['Title']" data-target=".Product-title" data-Title="Produkt Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
-            <p class="Product-info">
-                @Html.Raw(Model.json["Pages"]["/Product/Index"]["Info"])
-            </p>
-            <a data-jPath="['Pages']['/Product/Index']['Info']" data-target=".Product-info" data-Title="Produkt info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
+            <div class="textbox">
+                @Html.Raw(Model.json["Pages"]["/Product/Index"]["Title"])
+                @if (Editor)
+                {
+                    <a data-jPath="['Pages']['/Product/Index']['Title']" data-target=".Product-title" data-Title="Produkt Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
+                }
+            </div>
+            @Html.Raw(Model.json["Pages"]["/Product/Index"]["Info"])
+            @if (Editor)
+            {
+                <a data-jPath="['Pages']['/Product/Index']['Info']" data-target=".Product-info" data-Title="Produkt info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
+            }
         </div>
 
 
@@ -38,14 +52,14 @@
 
     <div class="row paddingT20">
         @foreach (RProducts product in Model.Products)
-		{
-			string tag = Request.QueryString["tag"];
-			bool show = string.IsNullOrEmpty(tag);
-			<a href="/Product/Details/@product.ID" data-tags="@foreach (Category Cat in product.categorys) { WriteLiteral(Cat.Name + ','); if (!show) { show = tag.Equals(Cat.Name); } }" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6" style="display: @(show? "block":"none");">
+        {
+            string tag = Request.QueryString["tag"];
+            bool show = string.IsNullOrEmpty(tag);
+            <a href="/Product/Details/@product.ID" data-tags="@foreach (Category Cat in product.categorys) { WriteLiteral(Cat.Name + ','); if (!show) { show = tag.Equals(Cat.Name); } }" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6" style="display: @(show? "block":"none");">
                 <figure>
                     <img src="~/Images/ProductAllImages/Small/@product.Image" class="img-responsive" />
 
-                    <figcaption>@product.Name</figcaption>
+                    <figcaption><h4>@product.Name </h4><p> @product.Details</p></figcaption>
                 </figure>
             </a>
         }

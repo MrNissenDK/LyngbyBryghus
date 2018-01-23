@@ -19,6 +19,20 @@ html {
     height: 100%;
 }
 
+
+.centered {
+    text-align: center;
+}
+
+.orderinfo {
+    margin-top: 4%;
+}
+
+.maintain {
+    max-width: 100%;
+    height: same-as-width;
+}
+
 body {
     position: relative;
     min-height: 100%;
@@ -28,6 +42,14 @@ body {
     padding-bottom: 80px;
 }
 
+/*REDIGER KNAP*/
+.textbox h2 {
+    display: inline-block;
+}
+
+.textbox p {
+    display: inline-block;
+}
 /*NAV START*/
 
 
@@ -136,9 +158,9 @@ body {
 }
 
 .opaque-navbar.opaque {
-    background-color:#333;
+    background-color: rgba(0, 0, 0, 0.80);
     height: 60px;
-    transition: background-color .1s ease 0s;
+    transition: background-color 0.3s ease 0s;
     transition-duration: 2s;
 }
 
@@ -368,14 +390,9 @@ img {
     color: white;
 }
 
-#order-view div.text-center {
-    padding: 20px 20px 40px 20px;
-}
 
-    #order-view div.text-center > p {
-        font-size: 0.8em;
-        margin-bottom: 0;
-    }
+
+
 /*BESTILLING SLUT*/
 
 /*KONTAKT START*/
@@ -428,23 +445,26 @@ a {
     z-index: 300;
 }
 
-    a:hover:not(.btn-custom) {
-        color: #939292 !important;
-        text-decoration: none;
-    }
-
 figcaption {
     position: absolute;
     bottom: 0;
     background-color: #333;
-    min-height: 13%;
+    height: 45px;
     width: 100%;
     text-align: center;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 3px;
     color: none;
     letter-spacing: 2px;
-    font-size:0.9em;
+    font-size: 0.9em;
+    -webkit-transition: height 0.3s ease-in-out; /* For Safari 3.1 to 6.0 */
+    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+figure:hover figcaption {
+    height: 100px;
+    max-height: unset;
+    color: #fff;
 }
 
 figure img {
@@ -562,13 +582,11 @@ figure img {
 
 /*Edit-knap*/
 .btn-edit {
-    color: #000;
-    /*background-color: #75BBA7;
-    border-color: #63b059;*/
-    background-color: #66dd6d;
+    color: white;
+    background-color: #3db085;
     border-color: #63b059;
     padding: 4px 6px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
     border-radius: 0;
     font-size: 0.7em;
     letter-spacing: 1px;
@@ -736,9 +754,6 @@ figure img {
 }
 
 @media (min-width: 992px) and (max-width: 1225px) {
-    #order-view div.text-center {
-        padding: 20px;
-    }
 
         #order-view div.text-center > p {
             font-size: 0.7em;
@@ -775,3 +790,4 @@ figure img {
         width: 960px;
     }
 }
+

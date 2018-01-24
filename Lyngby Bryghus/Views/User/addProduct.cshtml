@@ -3,7 +3,7 @@
 	ViewBag.Title = "addProduct";
 	Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
-<form>
+<form method="post" enctype="multipart/form-data">
 	<section class="container paddingT20" id="product-details">
 
 		<header class="row">
@@ -85,7 +85,7 @@
 					</div>
 				</section>
 
-				<a href="#" class="btn btn-custom">Se næste</a>
+				<button type="submit">send</button>
 			</section>
 		</article>
 

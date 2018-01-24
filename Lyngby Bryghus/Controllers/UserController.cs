@@ -15,6 +15,7 @@ namespace Lyngby_Bryghus.Controllers
     public class UserController : Controller
     {
         UserFac uf = new UserFac();
+        ProductsFac pf = new ProductsFac();
         // GET: Admin
         [AllowAnonymous]
         public ActionResult Index()
@@ -36,7 +37,7 @@ namespace Lyngby_Bryghus.Controllers
                 FormsAuthentication.SetAuthCookie(a.ID.ToString(), false);
                 Session["User"] = Username;
                 Session["Role"] = a.Role;
-                Session.Timeout = 2;
+                Session.Timeout = 20;
                 if (!string.IsNullOrEmpty(Request.QueryString["ReturnUrl"]))
                 {
                     Response.Redirect(Request.QueryString["ReturnUrl"]);
@@ -63,13 +64,27 @@ namespace Lyngby_Bryghus.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult addProduct(Products p)
+        {
+            if ((int)Session["Role"] >= 10)
+            {
+                pf.Insert(p);
+            }
+            return View();
+        }
         public ActionResult updateProduct()
         {
             return View();
         }
-        public ActionResult deletProduct()
+        public ActionResult deletProduct(int ID)
         {
-            return View();
+            if(Session["Role"] != null)
+                if ((int)Session["Role"] >= 10)
+                {
+                    pf.Delete(ID);
+                }
+            return Redirect("/Product");
         }
     }
 }

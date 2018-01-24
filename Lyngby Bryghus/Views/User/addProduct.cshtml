@@ -4,7 +4,7 @@
 	Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 <form method="post" enctype="multipart/form-data">
-	<section class="container paddingT20" id="product-details">
+	<section class="container paddingT20 add-product" id="product-details">
 
 		<header class="row">
 			<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></h2>
@@ -13,9 +13,9 @@
 		<article class="row row-eq-height paddingB20">
 
 			<section class="col-lg-4 col-md-4 col-sm-offset-0 col-sm-6 col-xs-offset-3 col-xs-6 product-image">
-				<a href="#">
+
 					<input type="file" accept="image/*" name="file" />
-					<figure>
+					<figure class="imageUpload">
 						<div id="cropper">
 
 						</div>
@@ -50,10 +50,10 @@
 									});
 								</script>
 							}
-						<img src="" class="img-responsive" type="button" data-toggle="modal" data-target="#myModal" />
+						<img src="" class="img-responsive" type="button" />
 					</figure>
 
-				</a>
+			
 			</section>
 
 			<section class="col-lg-8 col-md-8 col-md-6 col-xs-12 product-text">
@@ -85,32 +85,11 @@
 					</div>
 				</section>
 
-				<button type="submit">send</button>
+				<button type="submit" class="btn btn-custom">Gem</button>
 			</section>
 		</article>
 
 
 	</section>
 
-
-	<!-- Modal -->
-	<div class="modal fade" id="myModal" role="dialog">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title"></h4>
-				</div>
-				<div class="modal-body">
-					<img src="~/Images/ProductAllImages/Big/" class="img-responsive" />
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-custom" data-dismiss="modal">Luk</button>
-				</div>
-			</div>
-
-		</div>
-	</div>
 </form>

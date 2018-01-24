@@ -353,6 +353,9 @@ p {
 #product-details .product-text-last {
     padding-bottom: 30px;
 }
+#product-details figcaption > p {
+    margin-top:10px;
+}
 /*PRRODUCT DETAILS SLUT*/
 
 
@@ -361,6 +364,10 @@ p {
     padding-top: 15px;
     color: black;
 }
+#subscription-view figcaption > p,  #package-view figcaption > p{
+    margin-top:5px;
+}
+
 
 img {
     margin: 0 auto;
@@ -434,9 +441,23 @@ figure {
     position: relative;
 }
 
-a {
+a :not(.btn){
     color: #fff;
     z-index: 300;
+}
+a:hover :not(.btn){
+    color:#fff;
+    text-decoration:none;
+}
+
+/* visited link */
+a:visited  :not(.btn){
+    color: #fff;
+}
+
+/* selected link */
+a:active :not(.btn) {
+    color: #fff;
 }
 
 figcaption {
@@ -452,11 +473,10 @@ figcaption {
     font-size: 0.9em;
     -webkit-transition: all 0.3s ease-in-out; /* For Safari 3.1 to 6.0 */
     transition: all 0.3s ease-in-out;
-   
     overflow: hidden;
 }
 
-figure:hover figcaption {
+#product-all figure:hover figcaption {
     height: 35%;
     background-color: rgba(0, 0, 0, 0.85);
     max-height: unset;

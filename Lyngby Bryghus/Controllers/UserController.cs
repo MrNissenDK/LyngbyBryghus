@@ -8,6 +8,7 @@ using Repos.Models;
 using System.Web.Helpers;
 using System.Web.Security;
 using System.IO;
+using Lyngby_Bryghus.Helpers;
 
 namespace Lyngby_Bryghus.Controllers
 {
@@ -16,6 +17,7 @@ namespace Lyngby_Bryghus.Controllers
     {
         UserFac uf = new UserFac();
         ProductsFac pf = new ProductsFac();
+        FileTool FT = new FileTool();
         // GET: Admin
         [AllowAnonymous]
         public ActionResult Index()
@@ -65,10 +67,13 @@ namespace Lyngby_Bryghus.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult addProduct(Products p)
+        public ActionResult addProduct(HttpPostedFileBase file,Products p)
         {
             if ((int)Session["Role"] >= 10)
             {
+                string name = p.Name;
+                FT.Fileupload(file, name, outputPath, allowTypes);
+
                 pf.Insert(p);
             }
             return View();

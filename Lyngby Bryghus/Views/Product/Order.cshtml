@@ -8,7 +8,7 @@
 
     }
     bool Editor = (num >= 10);
-    ViewBag.Title = "Order";
+    ViewBag.Title = "Bestilling";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
@@ -18,37 +18,45 @@
             <img src="~/Images/ContentImage/order1.svg" class="img-responsive" />
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center orderinfo">
+            <div class="textbox">
                 @Html.Raw(Model["Pages"]["/Product/Order"]["Title"])
                 @if (Editor)
-    {
-            <a data-jPath="['Pages']['/Product/Order']['Title']" data-target=".Order-title" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
-}
+                {
+                    <a data-jPath="['Pages']['/Product/Order']['Title']" data-target=".Order-title" data-Title="Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+                }
+                </div>
+            <div class="textbox">
                 @Html.Raw(Model["Pages"]["/Product/Order"]["Info"])
 
                 @if (Editor)
-    {
-            <a data-jPath="['Pages']['/Product/Order']['Info']" data-target=".Order-info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
-}
+                {
+                    <a data-jPath="['Pages']['/Product/Order']['Info']" data-target=".Order-info" data-Title="Brødtekst" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+                }
+                </div>
                 <a href="/Home/Contact/" class="btn btn-custom">Kontakt</a>
-        </div>
+            </div>
     </div>
     <div class="row color row-eq-height">
         <div class="hidden-lg hidden-md col-sm-12 col-xs-12 padding0">
             <img src="~/Images/ContentImage/order2.jpg" class="img-responsive" />
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center centered">
-            @Html.Raw(Model["Pages"]["/Product/Order"]["Subscription"]["Title"])
-            @if (Editor)
+            <div class="textbox">
+                @Html.Raw(Model["Pages"]["/Product/Order"]["Subscription"]["Title"])
+                @if (Editor)
             {
-                <a data-jPath="['Pages']['/Product/Order']['Subscription']['Title']" data-target=".Order-SubscriptionTitle" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
-            }
-            @Html.Raw(Model["Pages"]["/Product/Order"]["Subscription"]["Info"])
-            @if (Editor)
+                    <a data-jPath="['Pages']['/Product/Order']['Subscription']['Title']" data-target=".Order-SubscriptionTitle" data-Title="Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+                }
+                </div>
+            <div class="textbox">
+                @Html.Raw(Model["Pages"]["/Product/Order"]["Subscription"]["Info"])
+                @if (Editor)
             {
-                <a data-jPath="['Pages']['/Product/Order']['Subscription']['Info']" data-target=".Order-Info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
-            }
-            <a href="/Product/Subscription/" class="btn btn-custom">Køb abonnement</a>
-        </div>
+                    <a data-jPath="['Pages']['/Product/Order']['Subscription']['Info']" data-target=".Order-Info" data-Title="Brødtekst" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+                }
+                </div>
+                <a href="/Product/Subscription/" class="btn btn-custom">Køb abonnement</a>
+            </div>
         <div class="col-lg-6 col-md-6 hidden-sm hidden-xs padding0">
             <img src="~/Images/ContentImage/order2.jpg" class="img-responsive" />
         </div>
@@ -58,18 +66,22 @@
             <img src="~/Images/ContentImage/order3.jpg" class="img-responsive" />
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center centered">
-            @Html.Raw(Model["Pages"]["/Product/Order"]["Package"]["Title"])
-            @if (Editor)
+            <div class="textbox">
+                @Html.Raw(Model["Pages"]["/Product/Order"]["Package"]["Title"])
+                @if (Editor)
             {
-                <a data-jPath="['Pages']['/Product/Order']['Package']['Title']" data-target=".Package-title" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
-            }
-            @Html.Raw(Model["Pages"]["/Product/Order"]["Package"]["Info"])
-            @if (Editor)
+                    <a data-jPath="['Pages']['/Product/Order']['Package']['Title']" data-target=".Package-title" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+                }
+                </div>
+            <div class="textbox">
+                @Html.Raw(Model["Pages"]["/Product/Order"]["Package"]["Info"])
+                @if (Editor)
             {
-                <a data-jPath="['Pages']['/Product/Order']['Package']['Info']" data-target=".Package-info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
-            }
-            <a href="/Product/Package/" class="btn btn-custom">Gå til bestilling</a>
-        </div>
+                    <a data-jPath="['Pages']['/Product/Order']['Package']['Info']" data-target=".Package-info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+                }
+                </div>
+                <a href="/Product/Package/" class="btn btn-custom">Gå til bestilling</a>
+            </div>
     </div>
 </div>
 

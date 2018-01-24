@@ -2,28 +2,45 @@
 @using Lyngby_Bryghus.ViewModels
 @model SubscriptionView
 @{
-    ViewBag.Title = "Subscription";
+    int num = 0;
+    if (Session["role"] != null)
+    {
+        int.TryParse(Session["role"].ToString(), out num);
+
+    }
+    bool Editor = (num >= 10);
+    ViewBag.Title = "Vælg et abonnement";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
 <div class="container" id="subscription-view">
     <div class="row paddingT20">
-		@Html.Raw(Model.json["Pages"]["/Product/Subscription"]["Title"])
-		<a data-jPath="['Pages']['/Product/Subscription']['Title']" data-target=".Subscription-title" data-Title="Abonnement Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
-		@Html.Raw(Model.json["Pages"]["/Product/Subscription"]["Info"])
-		<a data-jPath="['Pages']['/Product/Subscription']['Info']" data-target=".Subscription-info" data-Title="Abonnement info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
-</div>
-    <div class="row">
-        @foreach (Subscription sub in Model.Subscriptions)
-        {
-            <a href="#" class="col-lg-4 col-md-4  col-sm-offset-0 col-sm-4 col-xs-offset-1 col-xs-10 paddingB20">
-                <figure>
-                    <img src="~/Images/1.jpg" class="img-responsive" />
-                    <figcaption><p>@sub.Description</p></figcaption>
+        <div class="textbox">
+            @Html.Raw(Model.json["Pages"]["/Product/Subscription"]["Title"])
+            @if (Editor)
+            {
+                <a data-jPath="['Pages']['/Product/Subscription']['Title']" data-target=".Subscription-title" data-Title="Abonnement Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
+            }
+        </div>
+        <div class="textbox">
+            @Html.Raw(Model.json["Pages"]["/Product/Subscription"]["Info"])
+            @if (Editor)
+            {
+                <a data-jPath="['Pages']['/Product/Subscription']['Info']" data-target=".Subscription-info" data-Title="Abonnement info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
+            }
+            </div>
+        </div>
+        <div class="row">
+            @foreach (Subscription sub in Model.Subscriptions)
+            {
+                <a href="#" class="col-lg-4 col-md-4  col-sm-offset-0 col-sm-4 col-xs-offset-1 col-xs-10 paddingB20">
+                    <figure>
+                        <img src="~/Images/1.jpg" class="img-responsive" />
+                        <figcaption><p>@sub.Description</p></figcaption>
 
-                </figure>
-                <p class="text-center">@sub.Name</p>
-            </a>
-        }
+                    </figure>
+                    <p class="text-center">@sub.Name</p>
+                </a>
+            }
+        </div>
     </div>
-</div>

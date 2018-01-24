@@ -444,20 +444,33 @@ figure {
 a :not(.btn){
     color: #fff;
     z-index: 300;
+     text-decoration:none !important;
 }
 a:hover :not(.btn){
     color:#fff;
-    text-decoration:none;
+     text-decoration:none !important;
+}
+a:hover{
+    text-decoration:none !important;
+}
+
+a:focus{
+    outline:none;
+     text-decoration:none !important;
+
 }
 
 /* visited link */
 a:visited  :not(.btn){
     color: #fff;
+     text-decoration:none !important;
 }
 
 /* selected link */
 a:active :not(.btn) {
     color: #fff;
+     text-decoration:none !important;
+
 }
 
 figcaption {

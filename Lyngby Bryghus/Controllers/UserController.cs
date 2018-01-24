@@ -71,9 +71,12 @@ namespace Lyngby_Bryghus.Controllers
         {
             if ((int)Session["Role"] >= 10)
             {
+                p.Description = p.Description.Replace("\r\n", "<br/>");
+                p.Details = p.Details.Replace("\r\n", "<br/>");
+                p.Info = p.Info.Replace("\r\n", "<br/>");
                 string name = p.Name;
 
-                p.Image = FT.Fileupload(file, name, Request.PhysicalApplicationPath+"Images/Small/", new string[] { "jpg","png","jpeg", "gif" });
+                p.Image = FT.Fileupload(file, name, Request.PhysicalApplicationPath+ "Images/ProductAllImages/Small/", new string[] { "jpg","png","jpeg", "gif" });
 
                 pf.Insert(p);
             }
@@ -88,7 +91,9 @@ namespace Lyngby_Bryghus.Controllers
             if(Session["Role"] != null)
                 if ((int)Session["Role"] >= 10)
                 {
-                    pf.Delete(ID);
+                    Products p = pf.Get(ID);
+                    if(FT.deleteFile(Request.PhysicalApplicationPath + "Images/ProductAllImages/Small/"+p.Image))
+                        pf.Delete(ID);
                 }
             return Redirect("/Product");
         }

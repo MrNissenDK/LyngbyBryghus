@@ -49,6 +49,7 @@ namespace Lyngby_Bryghus.Helpers
             if (allowTypes.Contains("*") || allowTypes.Contains(extention))
             {
                 String newName = DateTime.Now.ToString("yyyyMMddHHmmssffff") + name + "." + extention;
+                newName = newName.Replace(' ', '_');
                 file.SaveAs(outputPath + newName);
                 return newName;
             }

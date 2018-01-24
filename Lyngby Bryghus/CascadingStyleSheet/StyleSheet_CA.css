@@ -464,7 +464,8 @@ figure:hover figcaption {
 }
 
 #product-section figcaption >h4{
-    
+    font-size:1.3em;
+    margin-bottom:15px;
 }
 
 #product-section figcaption >p{
@@ -475,7 +476,7 @@ figure:hover figcaption {
     position: absolute;
     bottom: 0;
     background-color: #333;
-    height: 16%;
+    height: 13%;
     width: 100%;
     text-align: center;
     padding-top: 3px;
@@ -776,6 +777,136 @@ figure img {
 }
 
 
+/*Figcaption på /Home/Index START*/
+@media (max-width: 320px){
+
+    #product-section figcaption >h4{
+        font-size:0.6em;
+        margin-top:5px;
+        margin-bottom:3px;
+    
+}
+
+#product-section figcaption >p{
+    font-size:0.5em;
+}
+
+#product-section figcaption{
+    height: 30%;
+    padding-top: 3px;
+}
+}
+@media (min-width: 321px) and (max-width: 500px){
+    
+    #product-section figcaption >h4{
+        font-size:0.7em;
+        margin-top:5px;
+        margin-bottom:3px;
+    
+}
+
+#product-section figcaption >p{
+    font-size:0.6em;
+}
+
+#product-section figcaption{
+    height: 30%;
+    padding-top: 3px;
+}
+}
+@media (min-width: 501px) and (max-width: 768px){
+    
+    #product-section figcaption >h4{
+        font-size:1em;
+        margin-top:5px;
+        margin-bottom:3px;
+    
+}
+
+#product-section figcaption >p{
+    font-size: 1em;
+}
+
+#product-section figcaption{
+    height: 30%;
+    padding-top: 3px;
+}
+}
+@media (min-width: 769px) and (max-width: 850px){
+    
+    #product-section figcaption >h4{
+        font-size:0.8em;
+        margin-top:5px;
+        margin-bottom:5px;
+    
+}
+
+#product-section figcaption >p{
+    font-size: 0.7em;
+}
+
+#product-section figcaption{
+    height: 14%;
+    padding-top: 3px;
+}
+
+#product-section figure:hover figcaption{
+    height: 55px;
+    
+}
+}
+@media (min-width: 851px) and (max-width: 1000px){
+    
+    #product-section figcaption >h4{
+        font-size:1.1em;
+        margin-top:6px;
+        margin-bottom:6px;
+    
+}
+
+#product-section figcaption >p{
+    font-size: 0.7em;
+}
+
+#product-section figcaption{
+    height: 15%;
+    padding-top: 3px;
+}
+
+#product-section figure:hover figcaption{
+    height: 55px;
+    
+}
+}
+@media (min-width: 1001px) and (max-width: 1280px){
+    
+    #product-section figcaption >h4{
+        font-size:1.1em;
+        margin-top:7px;
+        margin-bottom:7px;
+    
+}
+
+#product-section figcaption >p{
+    font-size: 0.7em;
+}
+
+#product-section figcaption{
+    height: 14%;
+    padding-top: 3px;
+}
+
+#product-section figure:hover figcaption{
+    height: 85px;
+    
+}
+}
+/*Figcaption på /Home/Index SLUT*/
+
+
+
+
+
 
 
 @media (min-width: 677px) and (max-width: 768px) {
@@ -833,9 +964,6 @@ figure img {
         right: 20px;
     }
 
-    #product-details {
-    }
-
     .navbar-default .navbar-collapse,
     .navbar-default .navbar-form {
         background-color: #a65958;
@@ -884,9 +1012,7 @@ figure img {
         padding-right: 14%;
     }
 
-    figcaption {
-        font-size: 0.8em;
-    }
+    
 }
 
 @media (min-width: 1200px) {

@@ -26,12 +26,6 @@ namespace Lyngby_Bryghus.Controllers
                 return Redirect("/user/ControlPanle");
             return View();
         }
-
-
-        public ActionResult ControlPanle()
-        {
-            return View("Home");
-        }
         [HttpPost]
         [AllowAnonymous]
 
@@ -62,6 +56,10 @@ namespace Lyngby_Bryghus.Controllers
             }
         }
 
+        public ActionResult ControlPanle()
+        {
+            return View("Home");
+        }
 
         public ActionResult LogOut()
         {

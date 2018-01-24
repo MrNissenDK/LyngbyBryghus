@@ -22,9 +22,16 @@ namespace Lyngby_Bryghus.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
+            if (Session["user"] != null)
+                return Redirect("/user/ControlPanle");
             return View();
         }
 
+
+        public ActionResult ControlPanle()
+        {
+            return View("Home");
+        }
         [HttpPost]
         [AllowAnonymous]
 
@@ -37,7 +44,8 @@ namespace Lyngby_Bryghus.Controllers
             if (a.ID > 0)
             {
                 FormsAuthentication.SetAuthCookie(a.ID.ToString(), false);
-                Session["User"] = Username;
+                Session["ID"] = a.ID;
+                Session["User"] = a.Name;
                 Session["Role"] = a.Role;
                 Session.Timeout = 20;
                 if (!string.IsNullOrEmpty(Request.QueryString["ReturnUrl"]))
@@ -45,7 +53,7 @@ namespace Lyngby_Bryghus.Controllers
                     Response.Redirect(Request.QueryString["ReturnUrl"]);
                 }
 
-                return View("Home");
+                return Redirect("/user/ControlPanle");
             }
             else
             {
@@ -87,7 +95,7 @@ namespace Lyngby_Bryghus.Controllers
 
                     pf.Insert(p);
                 }
-            return View();
+            return Redirect("/Product/Index/");
         }
         public ActionResult updateProduct()
         {

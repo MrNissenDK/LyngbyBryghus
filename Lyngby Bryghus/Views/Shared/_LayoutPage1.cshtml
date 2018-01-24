@@ -19,7 +19,7 @@
 <body>
 
 	<header class="row">
-		
+
 		<nav class="navbar navbar-default navbar-fixed-top opaque-navbar">
 			<div class="container-fluid paddingL0">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -30,15 +30,15 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					
+
 					<a href="/Home/Index/">
 						<h1 class="margin0">
-							<img src="~/Images/logo-mikro.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive visible-mikro hiddenAfterMikro"/>
-							<img src="~/Images/logo-lilleMobile.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive visible-xxs hidden-mikro hidden-sm"  />
-							
+							<img src="~/Images/logo-mikro.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive visible-mikro hiddenAfterMikro" />
+							<img src="~/Images/logo-lilleMobile.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive visible-xxs hidden-mikro hidden-sm" />
+
 							<img src="~/Images/logolille.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive visible-sm hidden-xs" />
-							<img src="~/Images/logo.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive hidden-xs hidden-sm visible-lg visible-md"  />
-						   
+							<img src="~/Images/logo.svg" id="nav-image" alt="Lyngby Bryghus" class="img-responsive hidden-xs hidden-sm visible-lg visible-md" />
+
 						</h1>
 					</a>
 				</div>
@@ -82,6 +82,16 @@
 			<button class="save-button" type="submit">Gem</button>
 		</form>
 	</div>
+
+	@if(Session["user"] != null){
+	<div id="AdminBox">
+		<h3>@Session["user"]</h3>
+		<h5>@Session["Role"]</h5>
+		<a href="/user/ControlPanle">Kontrol panel</a><br />
+		@RenderSection("AdminBox", required: false)<br />
+		<a href="/User/LogOut">Logud</a>
+	</div>
+	}
 
 	<script src="~/Scripts/tinymce/tinymce.min.js"></script>
 	<script src="~/Scripts/jquery-3.2.1.min.js"></script>

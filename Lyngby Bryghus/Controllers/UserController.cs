@@ -51,11 +51,25 @@ namespace Lyngby_Bryghus.Controllers
             }
         }
 
+
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();
             Session.Abandon();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult addProduct()
+        {
+            return View();
+        }
+        public ActionResult updateProduct()
+        {
+            return View();
+        }
+        public ActionResult deletProduct()
+        {
+            return View();
         }
     }
 }

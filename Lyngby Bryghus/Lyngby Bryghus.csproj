@@ -174,6 +174,28 @@
     <Content Include="Images\ProductAllImages\Small\ToxicWaste.png" />
     <Content Include="Images\ProductAllImages\Small\ViennaLager.png" />
     <Content Include="Images\SliderImage\sliderimage1.jpg" />
+    <Content Include="Scripts\Croppie-2.5.1\.gitattributes" />
+    <Content Include="Scripts\Croppie-2.5.1\.gitignore" />
+    <Content Include="Scripts\Croppie-2.5.1\croppie.css" />
+    <Content Include="Scripts\Croppie-2.5.1\croppie.js" />
+    <Content Include="Scripts\Croppie-2.5.1\croppie.min.js" />
+    <Content Include="Scripts\Croppie-2.5.1\demo\cat.jpg" />
+    <Content Include="Scripts\Croppie-2.5.1\demo\demo-1.jpg" />
+    <Content Include="Scripts\Croppie-2.5.1\demo\demo-2.jpg" />
+    <Content Include="Scripts\Croppie-2.5.1\demo\demo-3.jpg" />
+    <Content Include="Scripts\Croppie-2.5.1\demo\demo.css" />
+    <Content Include="Scripts\Croppie-2.5.1\demo\demo.js" />
+    <Content Include="Scripts\Croppie-2.5.1\demo\hero.png" />
+    <Content Include="Scripts\Croppie-2.5.1\demo\prism.css" />
+    <Content Include="Scripts\Croppie-2.5.1\demo\prism.js" />
+    <Content Include="Scripts\Croppie-2.5.1\deploy.js" />
+    <Content Include="Scripts\Croppie-2.5.1\index.html" />
+    <Content Include="Scripts\Croppie-2.5.1\test\unit\Croppie.js" />
+    <Content Include="Scripts\Croppie-2.5.1\test\unit\stubs\document.js" />
+    <Content Include="Scripts\Croppie-2.5.1\test\unit\stubs\DOMTokenList.js" />
+    <Content Include="Scripts\Croppie-2.5.1\test\unit\stubs\EventTarget.js" />
+    <Content Include="Scripts\Croppie-2.5.1\test\unit\stubs\HTMLElement.js" />
+    <Content Include="Scripts\Croppie-2.5.1\test\unit\stubs\window.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\likebutton.js" />
     <Content Include="Scripts\Main_JavaScript.js" />
@@ -341,6 +363,12 @@
     <Content Include="CascadingStyleSheet\font-awesome-4.7.0\scss\_variables.scss" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\Home.cshtml" />
+    <Content Include="Views\User\addProduct.cshtml" />
+    <Content Include="Scripts\Croppie-2.5.1\bower.json" />
+    <Content Include="Scripts\Croppie-2.5.1\LICENSE" />
+    <Content Include="Scripts\Croppie-2.5.1\package.json" />
+    <Content Include="Scripts\Croppie-2.5.1\README.md" />
+    <Content Include="Scripts\Croppie-2.5.1\test\unit\mocha.opts" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

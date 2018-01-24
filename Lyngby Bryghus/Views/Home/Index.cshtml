@@ -9,7 +9,7 @@
         
     }
     bool Editor = (num >= 10);
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Lyngby Bryghus";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
@@ -67,14 +67,14 @@
                 @Html.Raw(Model.json["Pages"]["/Home/Index"]["Title"])
                 @if (Editor)
              {
-            <a data-jPath="['Pages']['/Home/Index']['Title']" data-target=".Head-Title" data-Title="Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+            <a data-jPath="['Pages']['/Home/Index']['Title']" data-target=".Head-Title" data-Title="Overskrift" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
                 }
             </div>
             <div class="textbox">
                 @Html.Raw(Model.json["Pages"]["/Home/Index"]["Introduction"])
                 @if (Editor)
     {
-            <a data-jPath="['Pages']['/Home/Index']['Introduction']" data-target=".Head-Introduction" data-Title="Introduktion" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+            <a data-jPath="['Pages']['/Home/Index']['Introduction']" data-target=".Head-Introduction" data-Title="Introduktion" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
 }
             </div>
             </div>
@@ -120,14 +120,14 @@
                 @Html.Raw(Model.json["Pages"]["/Home/Index"]["Subscription"]["Title"])
                 @if (Editor)
     {
-            <a data-jPath="['Pages']['/Home/Index']['Subscription']['Title']" data-target=".Subscription-title" data-Title="Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+            <a data-jPath="['Pages']['/Home/Index']['Subscription']['Title']" data-target=".Subscription-title" data-Title="Overskrift" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
 }
             </div>
             <div class="textbox">
                 @Html.Raw(Model.json["Pages"]["/Home/Index"]["Subscription"]["Info"])
                 @if (Editor)
     {
-            <a data-jPath="['Pages']['/Home/Index']['Subscription']['Info']" data-target=".Subscription-info" data-Title="Brødtekst" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+            <a data-jPath="['Pages']['/Home/Index']['Subscription']['Info']" data-target=".Subscription-info" data-Title="Brødtekst" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
 }
             </div>
             <br />
@@ -139,14 +139,14 @@
                 @Html.Raw(Model.json["Pages"]["/Home/Index"]["Package"]["Title"])
                 @if (Editor)
     {
-            <a data-jPath="['Pages']['/Home/Index']['Package']['Title']" data-target=".Package-title" data-Title="Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+            <a data-jPath="['Pages']['/Home/Index']['Package']['Title']" data-target=".Package-title" data-Title="Overskrift" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
 }
             </div>
             <div class="textbox">
                 @Html.Raw(Model.json["Pages"]["/Home/Index"]["Package"]["Info"])
                 @if (Editor)
     {
-            <a data-jPath="['Pages']['/Home/Index']['Package']['Info']" data-target=".Package-info" data-Title="Brødtekst" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+            <a data-jPath="['Pages']['/Home/Index']['Package']['Info']" data-target=".Package-info" data-Title="Brødtekst" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
 }
             </div>
             <br />

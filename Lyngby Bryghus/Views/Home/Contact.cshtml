@@ -9,7 +9,7 @@
     }
     bool Editor = (num >= 10);
 
-    ViewBag.Title = "Kontakt";
+    ViewBag.Title = "Kontakt Lyngby Bryghus";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
@@ -34,7 +34,7 @@
                 @Html.Raw(Model["Pages"]["/Home/Contact"]["Title"])
                 @if (Editor)
                 {
-                    <a data-jPath="['Pages']['/Home/Contact']['Title']" data-target=".Contact-title" data-Title="Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+                    <a data-jPath="['Pages']['/Home/Contact']['Title']" data-target=".Contact-title" data-Title="Overskrift" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
                 }
             </div>
             <ul>
@@ -43,7 +43,7 @@
                         @Html.Raw(Model["Pages"]["/Home/Contact"]["Name"])
                         @if (Editor)
             {
-                            <a data-jPath="['Pages']['/Home/Contact']['Name']" data-target=".Contact-name" data-Title="Navn" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+                            <a data-jPath="['Pages']['/Home/Contact']['Name']" data-target=".Contact-name" data-Title="Navn" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
                         }
                     </div>
                 </li>
@@ -52,7 +52,7 @@
                         @Html.Raw(Model["Pages"]["/Home/Contact"]["Address"])
                         @if (Editor)
                         {
-                            <a data-jPath="['Pages']['/Home/Contact']['Address']" data-target=".Contact-address" data-Title="Adresse" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+                            <a data-jPath="['Pages']['/Home/Contact']['Address']" data-target=".Contact-address" data-Title="Adresse" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
                         }
                     </div>
                 </li>
@@ -61,7 +61,7 @@
                         @Html.Raw(Model["Pages"]["/Home/Contact"]["City"])
                         @if (Editor)
                         {
-                            <a data-jPath="['Pages']['/Home/Contact']['City']" data-target=".Contact-city" data-Title="By" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+                            <a data-jPath="['Pages']['/Home/Contact']['City']" data-target=".Contact-city" data-Title="By" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
                         }
                     </div>
                 </li>
@@ -70,7 +70,7 @@
                         @Html.Raw(Model["Pages"]["/Home/Contact"]["Mail"])
                         @if (Editor)
                         {
-                            <a data-jPath="['Pages']['/Home/Contact']['Mail']" data-target=".Contact-mail" data-Title="E-mail" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+                            <a data-jPath="['Pages']['/Home/Contact']['Mail']" data-target=".Contact-mail" data-Title="E-mail" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
                         }
                     </div>
                 </li>
@@ -79,7 +79,7 @@
                         @Html.Raw(Model["Pages"]["/Home/Contact"]["Phone"])
                         @if (Editor)
                         {
-                            <a data-jPath="['Pages']['/Home/Contact']['Phone']" data-target=".Contact-phone" data-Title="Telefonnummer" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span></a>
+                            <a data-jPath="['Pages']['/Home/Contact']['Phone']" data-target=".Contact-phone" data-Title="Telefonnummer" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
                         }
                     </div>
                 </li>

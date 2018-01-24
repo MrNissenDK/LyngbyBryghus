@@ -9,32 +9,34 @@
 
 	}
 	bool Editor = (num >= 10);
-	ViewBag.Title = "Index";
+	ViewBag.Title = "Produkter";
 	Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
 
 <section class="container paddingT20" id="product-all">
 	<header class="row">
-		<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
 			<div class="textbox">
 				@Html.Raw(Model.json["Pages"]["/Product/Index"]["Title"])
 				@if (Editor)
 				{
-					<a data-jPath="['Pages']['/Product/Index']['Title']" data-target=".Product-title" data-Title="Produkt Overskrift" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
+					<a data-jPath="['Pages']['/Product/Index']['Title']" data-target=".Product-title" data-Title="Overskrift" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
 				}
 			</div>
-			@Html.Raw(Model.json["Pages"]["/Product/Index"]["Info"])
-			@if (Editor)
-			{
-				<a data-jPath="['Pages']['/Product/Index']['Info']" data-target=".Product-info" data-Title="Produkt info" class="Edit btn btn-edit"><span class="glyphicon glyphicon-edit"></span> Rediger</a>
-			}
-		</div>
+            <div class="textbox">
+                @Html.Raw(Model.json["Pages"]["/Product/Index"]["Info"])
+                @if (Editor)
+                {
+                    <a data-jPath="['Pages']['/Product/Index']['Info']" data-target=".Product-info" data-Title="Brødtekst" class="Edit btn btn-edit" title="Rediger"><i class="fa fa-pencil-square-o"></i></a>
+                }
+            </div>
+            </div>
 
 
 		<div class="dropdown">
 			<button class="btn btn-custom dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Kategori
+				Vælg kategori
 				<span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -58,8 +60,9 @@
 			<div data-tags="@foreach (Category Cat in product.categorys) { WriteLiteral(Cat.Name + ','); if (!show) { show = tag.Equals(Cat.Name); } }" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6" style="display: @(show? "block":"none");">
 				<figure>
 					@if (Editor)
-					{
-						<a href="/User/deletProduct/@product.ID" class="btn btn-danger"><i class="fa fa-times"></i></a>
+                    {
+                        <a href="/User/EditProduct/@product.ID" class="btn btn-edit btn-edit-product" title="Rediger @product.Name"><i class="fa fa-pencil-square-o"></i></a>
+						<a href="/User/deletProduct/@product.ID" class="btn btn-danger" title="Slet @product.Name"><i class="fa fa-times"></i></a>
 					}
 					<a href="/Product/Details/@product.ID">
 						<img src="~/Images/ProductAllImages/Small/@product.Image" class="img-responsive" />
@@ -70,13 +73,14 @@
 			</div>
 		}
 
-
+        
 
 	</div>
+@if (Editor)
+{
 
 	@section AdminBox{
-		@if (Editor)
-		{
+		
 			<a href="/user/addProduct">Tilføj produkt</a>	
 		}
 	}

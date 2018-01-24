@@ -2,7 +2,7 @@
   "Pages": {
     "/Home/Index": {
       "Title": "<h2 class=\"Head-Title\">VELKOMMEN TIL LYNGBY BRYGHUS</h2>",
-      "Introduction": "<p class=\"margin0 Head-Introduction\">Lyngby Bryghus er et mikro bryggeri placeret midt p&aring; Djursland. Lyngby Bryghus har brygget og</p>",
+      "Introduction": "<p class=\"margin0 Head-Introduction\">Lyngby Bryghus er et mikro bryggeri placeret midt p&aring; Djursland. Lyngby Bryghus har brygget og solgt &oslash;l fra deres g&aring;rdbutik de sidste par &aring;r.</p>",
       "Subscription": {
         "Title": "<h2 class=\"Subscription-title\">K&oslash;b abonnement</h2>",
         "Info": "<p class=\"Subscription-info\">Sammens&aelig;t dit eget sortiment og&nbsp;<br />f&aring; leveret &oslash;llen lige til d&oslash;ren&nbsp;</p>"
@@ -13,36 +13,36 @@
       }
     },
     "/Product/Index": {
-      "Title": "<h2 class=\"Product-title\">Dennis' mor er en kage!</h2>",
-      "Info": "dhdhdhdhdhd"
+      "Title": "<h2 class=\"Product-title\">ALLE PRODUKTER</h2>",
+      "Info": "<p class=\"Product-info\">Her skal der st&aring; en masse sp&aelig;ndende tekst omkring produkterne.</p>"
     },
     "/Product/Order": {
-      "Title": "<h2 class=\"Order-title\">Bestil enkelt eller flere kager</h2>",
-      "Info": "<p class=\"paddingB20 Order-info\">&Oslash;nsker du ikke at k&oslash;be en K&AElig;MPE kage!!, er det ogs&aring; muligt at ringe og bestille enkelt eller flere p&aring;: @ = % ? + 45 43 24 54 23 eller giv os besked ved at trykke her:</p>",
+      "Title": "<h2 class=\"Order-title\">Bestil enkelt eller flere &oslash;l</h2>",
+      "Info": "<p class=\"paddingB20 Order-info\">&Oslash;nsker du ikke at k&oslash;be et abonnement, er det ogs&aring; muligt <br />at ringe og bestille enkelt &oslash;l p&aring;: + 45 43 24 54 23 <br />eller giv os besked ved at trykke her:</p>",
       "Subscription": {
         "Title": "<h2 class=\"Order-SubscriptionTitle\">K&oslash;b et abonnement</h2>",
-        "Info": "<p class=\"Order-Info paddingB20\">F&aring; en m&aring;nedlig overraskelse ved at k&oslash;be abonnement hos Lyngby Bryghus. Hvert m&aring;ned bliver der dannet en pakke med tilf&aelig;ldige &oslash;l</p>"
+        "Info": "<p class=\"Order-Info paddingB20\">F&aring; en m&aring;nedlig overraskelse ved at k&oslash;be abonnement hos Lyngby Bryghus.<br />Hver m&aring;ned sammens&aelig;tter vores system en pakke af sp&aelig;ndende og l&aelig;kre special&oslash;l, <br />som vi sender helt hjem til din hovedd&oslash;r.&nbsp;</p>"
       },
       "Package": {
-        "Title": "<h2 class=\"Package-title\">Send en KAGE</h2>",
-        "Info": "<p class=\"paddingB20 Package-info\">KAGEOverrask et familiemedlem eller ven, ved at bestille en af denne m&aring;neds pakkel&oslash;sninger.</p>"
+        "Title": "<h2 class=\"Package-title\">Send en gave</h2>",
+        "Info": "<p class=\"paddingB20 Package-info\">Overrask et familiemedlem eller ven, ved at bestille en af<br /> denne m&aring;neds pakkel&oslash;sninger.</p>"
       }
     },
     "/Product/Package": {
-      "Title": "<h2 class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center text-uppercase Package-title\" style=\"text-align: center;\">hejejejejjeje</h2>",
-      "Info": "<p class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 text-wrapper paddingB20 Package-info\" style=\"text-align: left;\">Hej med dig</p>"
+      "Title": "<h2 class=\"Package-title\">SEND EN GAVE</h2>",
+      "Info": "<p class=\"Package-info\">Lorem Ipsum<span>&nbsp;er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har v&aelig;ret standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilf&aelig;ldig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem &aring;rhundreder, men har ogs&aring; vundet indpas i elektronisk typografi uden v&aelig;sentlige &aelig;ndringer.</span></p>"
     },
     "/Product/Subscription": {
-      "Title": "<h2 class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center text-uppercase Subscription-title\">V&aelig;lg et abonnement</h2>",
-      "Info": "<p class=\"Subscription-info col-lg-12 col-md-12 col-sm-12 col-xs-12 text-wrapper paddingB20\">snsnsn</p>"
+      "Title": "<h2 class=\"Subscription-title\">V&aelig;lg et abonnement</h2>",
+      "Info": "<p class=\"Subscription-info\">Lorem Ipsum<span>&nbsp;er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har v&aelig;ret standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilf&aelig;ldig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem &aring;rhundreder, men har ogs&aring; vundet indpas i elektronisk typografi uden v&aelig;sentlige &aelig;ndringer.</span></p>"
     },
     "/Home/Contact": {
       "Title": "<h2 class=\"Contact-title\">Kontakt os</h2>",
-      "Name": "<p class=\"Contact-name\">kagekage</p>",
-      "Address": "<p class=\"Contact-address\">Svinget 3</p>",
-      "City": "<p class=\"Contact-city\">Kageby</p>",
-      "Mail": "<p class=\"Contact-mail\">kage</p>",
-      "Phone": "<p class=\"Contact-phone\">kage</p>"
+      "Name": "<p class=\"Contact-name\">Lyngby Bryghus</p>",
+      "Address": "<p class=\"Contact-address\">Svinget 2</p>",
+      "City": "<p class=\"Contact-city\">8570 Trustrup</p>",
+      "Mail": "<p class=\"Contact-mail\">hto@djes.dk</p>",
+      "Phone": "<p class=\"Contact-phone\">+ 45 <span>42 78 96 05</span></p>"
     }
   }
 }

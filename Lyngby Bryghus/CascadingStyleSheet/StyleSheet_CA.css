@@ -120,7 +120,7 @@ body {
 	}
 
 		.navbar-default .navbar-nav > li > a:hover,
-		.navbar-default .navbar-nav > li > a:focus {
+		.navbar-default .navbar-nav > li > a:focus, a.hovered {
 			color: #fff !important;
 			background-color: rgba(255, 255, 255, 0.10) !important;
 		}
@@ -166,7 +166,6 @@ body {
 
 .opaque-navbar {
 	background-color: #a65958;
-	/* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
 	height: 60px;
 	border-bottom: 0px;
 	transition: background-color .1s ease 0s;
@@ -711,9 +710,9 @@ figure img {
 	color: #000;
 	background-color: #f6f6f6;
 	border-color: #eeeded;
-	padding: 2px 10px 1px 10px;
+	padding: 3px 10px 2px 10px;
 	border-radius: 0;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	letter-spacing: 2px;
 	font-weight: 500;
 	z-index: 0;
@@ -742,39 +741,95 @@ figure img {
 
 /*Edit-knap*/
 .btn-edit {
+    width:35px;
 	color: white;
-	background-color: #3db085;
-	border-color: #63b059;
-	padding: 4px 6px;
-	margin-bottom: 10px;
+	/*background-color: #3db085;*/
+    background-color: #2d9d74;
+	border:none;
 	border-radius: 0;
-	font-size: 0.7em;
-	letter-spacing: 1px;
-	font-weight: 500;
 	z-index: 0;
+    box-sizing:border-box;
 }
 
-	.btn-edit:focus,
-	.btn-edit.focus {
-		color: #000;
-		background-color: #f6f6f6;
-		border-color: #f0f0f0;
-	}
+.btn-edit:focus,
+.btn-edit.focus {
+	color: #fff;
+	background-color: #52cb9e;
+}
 
-	.btn-edit:hover {
-		color: #000;
-		background-color: #ededed;
-		border-color: #f0f0f0;
-	}
+.btn-edit:hover {
+	color: #fff;
+	background-color: #52cb9e;
+}
 
-	.btn-edit:active,
-	.btn-edit.active,
-	.open > .dropdown-toggle.btn-custom {
-		color: #000;
-		background-color: #ededed;
-		border-color: #f0f0f0;
-	}
+.btn-edit:active,
+.btn-edit.active,
+.open > .dropdown-toggle.btn-custom {
+	color: #fff;
+	background-color: #52cb9e;
+}
+
+.deco{
+    background-color: rgba(34, 34, 34, 0.18);
+}
+
+/*DELETE KNAP*/
+.btn-danger{
+    width:35px;
+    border-radius:0;
+    border:none;
+    background-color:#a94442;
+    background-image:none;
+}
+.btn-danger:focus,
+.btn-danger.focus {
+	color: #fff;
+	background-color: #c85a58;
+}
+
+.btn-danger:hover {
+	color: #fff;
+	background-color: #c85a58;
+}
+
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-custom {
+	color: #fff;
+	background-color: #c85a58;
+}
+
+#product-all a.btn-danger{
+    position:absolute;
+    top:1px;
+    right:1px;
+}
+
+#product-all a.btn-edit-product{
+    position:absolute;
+    top:1px;
+    right:40px;
+}
+
+  
 /*KNAPPER START*/
+
+.textbox{
+    position:relative;
+    padding-right:33px;
+    margin-bottom:5px;
+}
+
+.textbox > a.btn-edit{
+    position:absolute;
+    right:1px;
+    top:1px;
+}
+
+.padding30{
+    padding-left:30px;
+    padding-right:30px;
+}
 
 
 /*POP-UP VIINDUE START*/
@@ -1101,4 +1156,12 @@ figure img {
 	.container {
 		width: 960px;
 	}
+
+
+    #welcome-section{
+       
+        padding-bottom:50px;
+    }
+
+  
 }

@@ -60,8 +60,8 @@ body {
     left: 0;
 }
 
-.navbar-header{
-    height:60px;
+.navbar-header {
+    height: 60px;
 }
 
 .navbar-brand {
@@ -77,7 +77,6 @@ body {
 .navbar-default {
     height: 60px;
     margin-bottom: 0 !important;
-    /*background-color: #a65958 !important;*/
     border: none !important;
     background-image: none;
     font-size: 0.9em;
@@ -149,23 +148,20 @@ body {
 }
 
 .opaque-navbar {
-    background-color:#a65958;
-  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+    background-color: #a65958;
+    /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
     height: 60px;
     border-bottom: 0px;
     transition: background-color .1s ease 0s;
     transition-duration: 1s;
 }
 
-.opaque-navbar.opaque {
-    background-color: rgba(0, 0, 0, 0.80);
-    height: 60px;
-    transition: background-color 0.3s ease 0s;
-    transition-duration: 2s;
-}
-
-
-
+    .opaque-navbar.opaque {
+        background-color: rgba(0, 0, 0, 0.80);
+        height: 60px;
+        transition: background-color 0.3s ease 0s;
+        transition-duration: 2s;
+    }
 /*NAV SLUT*/
 
 
@@ -181,7 +177,7 @@ body {
     line-height: initial;
 }
 
-    .sociallinks a {     
+    .sociallinks a {
         color: white;
         font-size: 18px;
     }
@@ -384,16 +380,14 @@ img {
 }
 /*SUBSCRIPTION AND PACKAGE SLUT*/
 
+
 /*BESTILLING START*/
 .color {
     background-color: #ab5958;
     color: white;
 }
-
-
-
-
 /*BESTILLING SLUT*/
+
 
 /*KONTAKT START*/
 #logocontainer {
@@ -402,29 +396,29 @@ img {
     position: relative;
 }
 
-#logocontainer div:first-child {
-    z-index: 1;
-    position: absolute;
-    background-color: white;
-    width: 300px;
-    height: 44px;
-    margin: 0 auto;
-    left: 50%;
-    bottom: 3px;
-    transform: translate(-50%, -50%) skew(-20deg);
-}
+    #logocontainer div:first-child {
+        z-index: 1;
+        position: absolute;
+        background-color: white;
+        width: 300px;
+        height: 44px;
+        margin: 0 auto;
+        left: 50%;
+        bottom: 3px;
+        transform: translate(-50%, -50%) skew(-20deg);
+    }
 
-#logocontainer div img {
-    margin: 0 auto;
-    -webkit-transform: skew(20deg);
-    display: block;
-}
+    #logocontainer div img {
+        margin: 0 auto;
+        -webkit-transform: skew(20deg);
+        display: block;
+    }
 
-#logocontainer div:last-child {
-    width: 100%;
-    height: 10px;
-    background-color: #ab5958;
-}
+    #logocontainer div:last-child {
+        width: 100%;
+        height: 10px;
+        background-color: #ab5958;
+    }
 
 #contactpage ul {
     list-style-type: none !important;
@@ -449,21 +443,53 @@ figcaption {
     position: absolute;
     bottom: 0;
     background-color: #333;
-    height: 45px;
+    height: 13%;
+    width: 100%;
+    text-align: center;
+    padding: 3px 10px;
+    color: none;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+    -webkit-transition: all 0.3s ease-in-out; /* For Safari 3.1 to 6.0 */
+    transition: all 0.3s ease-in-out;
+   
+    overflow: hidden;
+}
+
+figure:hover figcaption {
+    height: 35%;
+    background-color: rgba(0, 0, 0, 0.85);
+    max-height: unset;
+    color: #fff;
+}
+
+#product-section figcaption >h4{
+    
+}
+
+#product-section figcaption >p{
+    font-size:0.8em;
+}
+
+#product-section figcaption{
+    position: absolute;
+    bottom: 0;
+    background-color: #333;
+    height: 16%;
     width: 100%;
     text-align: center;
     padding-top: 3px;
     color: none;
     letter-spacing: 2px;
-    font-size: 0.9em;
-    -webkit-transition: height 0.3s ease-in-out; /* For Safari 3.1 to 6.0 */
-    transition: height 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out; /* For Safari 3.1 to 6.0 */
+    transition: all 0.3s ease-in-out;
     overflow: hidden;
 }
 
-figure:hover figcaption {
+#product-section figure:hover figcaption {
     height: 100px;
     max-height: unset;
+    background-color: rgba(0, 0, 0, 0.85);
     color: #fff;
 }
 
@@ -473,7 +499,6 @@ figure img {
 /*FIGURE, FIGCAPTION, LINK SLUT*/
 
 /*LOGIN SIDE*/
-
 .loginbox {
     display: table;
     background-color: #a65958;
@@ -485,24 +510,87 @@ figure img {
     box-sizing: border-box;
 }
 
-.loginbox input {
-    margin-bottom: 10px;
-    color: black;
+    .loginbox input {
+        margin-bottom: 10px;
+        color: black;
+    }
+
+    .loginbox button {
+        color: black;
+    }
+
+    .loginbox label {
+        font-weight: 100;
+    }
+
+    .loginbox h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+/*WYSIWYG START*/
+#Editor {
+    z-index: 10000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #ffffff;
+    width: 500px;
+    height: 600px;
 }
 
-.loginbox button {
-    color: black;
+.mce-tinymce, .mce-container-body, #code_ifr {
+    max-height: 100% !important;
 }
 
-.loginbox label {
-    font-weight: 100;
+#Editor form {
+    height: 100%;
 }
 
-.loginbox h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center;
+#Editor form label {
+    min-width: 100%;
+    min-height: 5%;
+    max-width: 100%;
+    max-height: 5%;
+    padding: 4px 5px;
+    margin: 0;
+    vertical-align: text-bottom;
 }
+
+#Editor > form > textarea {
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 95%;
+    max-width: 100%;
+    max-height: 95%;
+}
+
+#Editor > form > button.close-button {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#Editor > form > button.save-button {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#mceu_15 {
+    z-index: 10000;
+}
+
+
+
+/*WYSIWYG SLUT*/
+
 
 /*DIVERSE CLASS START*/
 .margin0 {
@@ -541,8 +629,6 @@ figure img {
     margin-left: 10px;
     margin-right: 10px;
 }
-
-
 /*DIVERSE CLASS START*/
 
 
@@ -594,30 +680,30 @@ figure img {
     z-index: 0;
 }
 
-.btn-edit:focus,
-.btn-edit.focus {
-    color: #000;
-    background-color: #f6f6f6;
-    border-color: #f0f0f0;
-}
+    .btn-edit:focus,
+    .btn-edit.focus {
+        color: #000;
+        background-color: #f6f6f6;
+        border-color: #f0f0f0;
+    }
 
-.btn-edit:hover {
-    color: #000;
-    background-color: #ededed;
-    border-color: #f0f0f0;
-}
+    .btn-edit:hover {
+        color: #000;
+        background-color: #ededed;
+        border-color: #f0f0f0;
+    }
 
-.btn-edit:active,
-.btn-edit.active,
-.open > .dropdown-toggle.btn-custom {
-    color: #000;
-    background-color: #ededed;
-    border-color: #f0f0f0;
-}
+    .btn-edit:active,
+    .btn-edit.active,
+    .open > .dropdown-toggle.btn-custom {
+        color: #000;
+        background-color: #ededed;
+        border-color: #f0f0f0;
+    }
 /*KNAPPER START*/
 
 
-
+/*POP-UP VIINDUE START*/
 .modal-content {
     border-radius: 0 !important;
     padding: 45px;
@@ -636,33 +722,59 @@ figure img {
 .modal-header, .modal-footer {
     border: 0;
 }
+/*POP-UP VIINDUE SLUT*/
 
 
 
 
 
 /*Media*/
-@media (max-width: 399px){
-    .visible-mikro{
-        display:block !important;
+@media (max-width: 399px) {
+    .visible-mikro {
+        display: block !important;
     }
-    .hidden-mikro{
-        visibility:hidden;
+
+    .hidden-mikro {
+        visibility: hidden;
     }
 }
 
-@media (min-width:400px){
-    .hiddenAfterMikro{
-        visibility:hidden;
-    }
-
-}
-
-@media (min-width: 400px) and (max-width: 442px){
-    .visible-xxs{
-        display:block !important;
+@media (min-width:400px) {
+    .hiddenAfterMikro {
+        visibility: hidden;
     }
 }
+
+@media (min-width: 400px) and (max-width: 442px) {
+    .visible-xxs {
+        display: block !important;
+    }
+}
+
+@media (max-width:700px){
+    #Editor{
+        width:100%;
+        height:100%;
+        
+    }
+    #Editor > form > textarea{
+        width:100%;
+    }
+    #Editor .mce-tinymce{
+        width:100%!important;
+        height:500px !important;
+    }
+
+
+    #Editor > form > button.save-button {
+    z-index: 1;
+    top: 0;
+    right: 50px;
+    bottom:unset;
+
+}
+}
+
 
 
 
@@ -723,11 +835,12 @@ figure img {
 
     #product-details {
     }
+
     .navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-    background-color: #a65958;
-    border-color: #a65958 !important;
-}
+    .navbar-default .navbar-form {
+        background-color: #a65958;
+        border-color: #a65958 !important;
+    }
 }
 
 @media (min-width: 767px) and (max-width: 841px) {
@@ -755,14 +868,14 @@ figure img {
 
 @media (min-width: 992px) and (max-width: 1225px) {
 
-        #order-view div.text-center > p {
-            font-size: 0.7em;
-            margin-bottom: 0px;
-        }
+    #order-view div.text-center > p {
+        font-size: 0.7em;
+        margin-bottom: 0px;
+    }
 
-        #order-view div.text-center > h2 {
-            margin-top: 5px;
-        }
+    #order-view div.text-center > h2 {
+        margin-top: 5px;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -790,4 +903,3 @@ figure img {
         width: 960px;
     }
 }
-

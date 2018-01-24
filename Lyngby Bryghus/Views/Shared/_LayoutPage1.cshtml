@@ -70,54 +70,7 @@
 		</footer>
 	</div>
 
-	<style>
-		#Editor {
-			z-index: 10000;
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%,-50%);
-			background: #ffffff;
-			width: 500px;
-			height: 600px;
-		}
-			#Editor form {
-				height: 100%;
-			}
-				#Editor form label {
-					min-width: 100%;
-					min-height: 5%;
-					max-width: 100%;
-					max-height: 5%;
-					padding: 4px 5px;
-					margin: 0;
-					vertical-align: text-bottom;
-				}
-				#Editor > form > textarea {
-					position: absolute;
-					bottom: 0;
-					box-sizing: border-box;
-					min-width: 100%;
-					min-height: 95%;
-					max-width: 100%;
-					max-height: 95%;
-				}
-				#Editor > form > button.close-button {
-					z-index: 1;
-					position: absolute;
-					top: 0;
-					right: 0;
-				}
-				#Editor > form > button.save-button {
-					z-index: 1;
-					position: absolute;
-					bottom: 0;
-					right: 0;
-				}
-		#mceu_15 {
-			z-index: 10000;
-		}
-	</style>
+
 	<div id="Editor" style="display:none;">
 		<form name="Editor" action="/Home/update" method="post">
 			<label class="Title">Title</label>
@@ -126,7 +79,7 @@
 			</button>
 			<input type="hidden" name="jPath" />
 			<textarea name="value"></textarea>
-			<button class="save-button" type="submit">save</button>
+			<button class="save-button" type="submit">Gem</button>
 		</form>
 	</div>
 

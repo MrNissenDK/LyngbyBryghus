@@ -2,10 +2,10 @@
   "Pages": {
     "/Home/Index": {
       "Title": "<h2 class=\"Head-Title\">VELKOMMEN TIL LYNGBY BRYGHUS</h2>",
-      "Introduction": "<p class=\"margin0 Head-Introduction\">Lyngby Bryghus er et mikro bryggeri placeret midt p&aring; Djursland. Lyngby Bryghus har brygget og solgt &oslash;l fra deres g&aring;rdbutik</p>\r\n<p class=\"margin0 Head-Introduction\">de sidste par &aring;r.</p>",
+      "Introduction": "<p class=\"margin0 Head-Introduction\">Lyngby Bryghus er et mikro bryggeri placeret midt p&aring; Djursland. Lyngby Bryghus har brygget og</p>",
       "Subscription": {
         "Title": "<h2 class=\"Subscription-title\">K&oslash;b abonnement</h2>",
-        "Info": "<p class=\"Subscription-info\">Sammens&aelig;t dit eget sortiment og&nbsp;<br />f&aring; leveret &oslash;llen lige til d&oslash;ren</p>"
+        "Info": "<p class=\"Subscription-info\">Sammens&aelig;t dit eget sortiment og&nbsp;<br />f&aring; leveret &oslash;llen lige til d&oslash;ren&nbsp;</p>"
       },
       "Package": {
         "Title": "<h2 class=\"Package-title\">Send en pakke</h2>",

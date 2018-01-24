@@ -69,17 +69,24 @@ namespace Lyngby_Bryghus.Controllers
         [HttpPost]
         public ActionResult addProduct(HttpPostedFileBase file,Products p)
         {
-            if ((int)Session["Role"] >= 10)
-            {
-                p.Description = p.Description.Replace("\r\n", "<br/>");
-                p.Details = p.Details.Replace("\r\n", "<br/>");
-                p.Info = p.Info.Replace("\r\n", "<br/>");
-                string name = p.Name;
 
-                p.Image = FT.Fileupload(file, name, Request.PhysicalApplicationPath+ "Images/ProductAllImages/Small/", new string[] { "jpg","png","jpeg", "gif" });
+            if (Session["Role"] != null)
+                if ((int)Session["Role"] >= 10)
+                {
+                    p.Price = Decimal.Parse(Request["Price"].Replace(".", ","));
+                    p.Stock = Decimal.Parse(Request["Stock"].Replace(".", ","));
+                    if(p.Description != null)
+                        p.Description = p.Description.Replace("\r\n", "<br/>");
+                    if (p.Details != null)
+                        p.Details = p.Details.Replace("\r\n", "<br/>");
+                    if (p.Info != null)
+                        p.Info = p.Info.Replace("\r\n", "<br/>");
+                    string name = p.Name;
 
-                pf.Insert(p);
-            }
+                    p.Image = FT.Fileupload(file, name, Request.PhysicalApplicationPath+ "Images/ProductAllImages/Small/", new string[] { "jpg","png","jpeg", "gif" });
+
+                    pf.Insert(p);
+                }
             return View();
         }
         public ActionResult updateProduct()
@@ -96,6 +103,16 @@ namespace Lyngby_Bryghus.Controllers
                         pf.Delete(ID);
                 }
             return Redirect("/Product");
+        }
+
+        public ActionResult addEvent()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult addEvent(Event e)
+        {
+            return View();
         }
     }
 }

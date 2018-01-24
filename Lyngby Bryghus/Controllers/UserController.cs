@@ -72,7 +72,8 @@ namespace Lyngby_Bryghus.Controllers
             if ((int)Session["Role"] >= 10)
             {
                 string name = p.Name;
-                FT.Fileupload(file, name, outputPath, allowTypes);
+
+                p.Image = FT.Fileupload(file, name, Request.PhysicalApplicationPath+"Images/Small/", new string[] { "jpg","png","jpeg", "gif" });
 
                 pf.Insert(p);
             }

@@ -1137,35 +1137,6 @@ color: #fff;
 }
 }
 
-
-/*Figcaption hover*/
-@media (min-width: 769px) and (max-width: 1280px) {
-    /*#product-section figure:hover figcaption {
-        height: 100px;
-        max-height: unset;
-        background-color: rgba(0, 0, 0, 0.85);
-        color: #fff;
-    }*/
-
-    /*#product-all figure:hover figcaption {
-	height: 35%;
-	background-color: rgba(0, 0, 0, 0.85);
-	max-height: unset;
-	color: #fff;
-    padding-left:0;
-    padding-right:0;
-}*/
-
-}
-
-/*Figcaption på /Home/Index SLUT*/
-
-
-
-
-
-
-
 @media (min-width: 677px) and (max-width: 768px) {
 
 	#product-section figure img, #product-all figure img, #product-details figure img {

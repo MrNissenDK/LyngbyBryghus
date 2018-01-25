@@ -37,6 +37,26 @@ html {
 			color: #ddd;
 		}
 
+.flex-row {
+	display: flex;
+	flex-wrap: wrap;
+}
+	.flex-row .text-center {
+		align-self: center;
+		padding: 20px;
+	}
+	.flex-row .img-cut {
+		overflow-x: hidden;
+		overflow-y: visible;
+	}
+		.flex-row .img-cut img {
+			transform: translate(-50%,0);
+			position: relative;
+			left: 50%;
+			width: auto !important;
+			height: 100% !important;
+			max-width: unset !important;
+		}
 .centered {
 	text-align: center;
 }

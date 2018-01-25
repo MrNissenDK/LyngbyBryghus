@@ -7,13 +7,13 @@ $(function () {
 		let Tag = ancher.attr("data-tag");
 		window.history.pushState(null, ancher.attr("href"), ancher.attr("href"));
 		if (Tag === "*") {
-			$("a.gallery_product").slideUp(300);
+			$("div.gallery_product").slideUp(300);
 			setTimeout(function () {
-				$("a.gallery_product").slideDown(300);
+				$("div.gallery_product").slideDown(300);
 			}, 400);
 		}
 		else {
-			$("a.gallery_product").slideUp(300);
+			$("div.gallery_product").slideUp(300);
 			setTimeout(function () {
 				$("[data-tags*=\"" + Tag + "\"]").slideDown(300);
 			},400);

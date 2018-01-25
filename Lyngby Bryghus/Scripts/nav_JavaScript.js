@@ -7,7 +7,6 @@
 });
 
 
-
 var urlname = window.location.href;
 
 // passes on every element with a class ".link"

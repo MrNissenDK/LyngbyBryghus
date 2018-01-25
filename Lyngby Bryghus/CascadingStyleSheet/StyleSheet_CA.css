@@ -741,14 +741,14 @@ figure img {
 
 /*Edit-knap*/
 .btn-edit {
-    width:35px;
+	width:35px;
 	color: white;
 	/*background-color: #3db085;*/
-    background-color: #2d9d74;
+	background-color: #2d9d74;
 	border:none;
 	border-radius: 0;
 	z-index: 0;
-    box-sizing:border-box;
+	box-sizing:border-box;
 }
 
 .btn-edit:focus,
@@ -770,16 +770,16 @@ figure img {
 }
 
 .deco{
-    background-color: rgba(34, 34, 34, 0.18);
+	background-color: rgba(34, 34, 34, 0.18);
 }
 
 /*DELETE KNAP*/
 .btn-danger{
-    width:35px;
-    border-radius:0;
-    border:none;
-    background-color:#a94442;
-    background-image:none;
+	width:35px;
+	border-radius:0;
+	border:none;
+	background-color:#a94442;
+	background-image:none;
 }
 .btn-danger:focus,
 .btn-danger.focus {
@@ -800,35 +800,35 @@ figure img {
 }
 
 #product-all a.btn-danger{
-    position:absolute;
-    top:1px;
-    right:1px;
+	position:absolute;
+	top:1px;
+	right:1px;
 }
 
 #product-all a.btn-edit-product{
-    position:absolute;
-    top:1px;
-    right:40px;
+	position:absolute;
+	top:1px;
+	right:40px;
 }
 
   
 /*KNAPPER START*/
 
 .textbox{
-    position:relative;
-    padding-right:33px;
-    margin-bottom:5px;
+	position:relative;
+	padding-right:33px;
+	margin-bottom:5px;
 }
 
 .textbox > a.btn-edit{
-    position:absolute;
-    right:1px;
-    top:1px;
+	position:absolute;
+	right:1px;
+	top:1px;
 }
 
 .padding30{
-    padding-left:30px;
-    padding-right:30px;
+	padding-left:30px;
+	padding-right:30px;
 }
 
 
@@ -1158,10 +1158,10 @@ figure img {
 	}
 
 
-    #welcome-section{
-       
-        padding-bottom:50px;
-    }
+	#welcome-section{
+	   
+		padding-bottom:50px;
+	}
 
   
 }

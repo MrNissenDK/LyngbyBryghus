@@ -4,8 +4,8 @@ var lastScreenX = null;
 $(function () {
 	if (localStorage.getItem("AdminBox") != null) {
 		$("#AdminBox").css("right", localStorage.getItem("AdminBox"));
-		$("#AdminBox").css("display","");
 	}
+	$("#AdminBox").css("display","");
 	document.addEventListener("touchmove", function (e) {
 		let sx = e.changedTouches[0].screenX;
 		if (sx >= window.innerWidth*0.95 && sx <= window.innerWidth) {
@@ -26,7 +26,6 @@ $(function () {
 		}
 	},false);
 	document.addEventListener("mousemove", function (e) {
-		console.log(e);
 		if (e.buttons == 1 && e.screenX >= window.innerWidth * 0.95 && e.screenX <= window.innerWidth) {
 			var drag = 0;
 			if (lastScreenX)

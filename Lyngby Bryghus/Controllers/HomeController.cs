@@ -21,11 +21,11 @@ namespace Lyngby_Bryghus.Controllers
         // GET: Home
         public ActionResult Index()
         {
-
+            EF.ExecuteSQL("Delete Event where Date < '"+DateTime.Now.ToString("yyyy-MM-dd")+"'");
             HomeView HV = new HomeView
             {
                 Products = PF.GetPackOf(4),
-                Events = EF.GetAll("Date", "DESC", 3),
+                Events = EF.GetAll("Date", "ASC"),
                 json = JObject.Parse(FT.LoadFile(Request.PhysicalApplicationPath + "/ServerData/Pages.json"))
             };
             return View(HV);

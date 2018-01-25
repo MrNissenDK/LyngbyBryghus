@@ -18,6 +18,7 @@ namespace Lyngby_Bryghus.Controllers
         UserFac uf = new UserFac();
         ProductsFac pf = new ProductsFac();
         FileTool FT = new FileTool();
+        EventFac EF = new EventFac();
         // GET: Admin
         [AllowAnonymous]
         public ActionResult Index()
@@ -29,7 +30,7 @@ namespace Lyngby_Bryghus.Controllers
         [HttpPost]
         [AllowAnonymous]
 
-        public ActionResult LogInResult()
+        public ActionResult Index(string ReturnUrl)
         {
             string Username = Request["Username"].Trim();
             string Password = Request["Password"].Trim();
@@ -42,11 +43,9 @@ namespace Lyngby_Bryghus.Controllers
                 Session["User"] = a.Name;
                 Session["Role"] = a.Role;
                 Session.Timeout = 20;
-                if (!string.IsNullOrEmpty(Request.QueryString["ReturnUrl"]))
-                {
-                    Response.Redirect(Request.QueryString["ReturnUrl"]);
-                }
 
+                if (!string.IsNullOrEmpty(ReturnUrl))
+                    return Redirect(ReturnUrl);
                 return Redirect("/user/ControlPanle");
             }
             else
@@ -118,6 +117,13 @@ namespace Lyngby_Bryghus.Controllers
         [HttpPost]
         public ActionResult addEvent(Event e)
         {
+            if (Session["Role"] != null)
+                if ((int)Session["Role"] >= 10)
+                {
+                    EF.Insert(e);
+                    return Redirect("/Home/");
+                }
+
             return View();
         }
     }

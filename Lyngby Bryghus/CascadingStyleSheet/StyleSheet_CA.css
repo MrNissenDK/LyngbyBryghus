@@ -25,11 +25,11 @@ html {
 	top: 20%;
 	padding: 10px;
 	width: 155px;
-	background: #a65958;
-	border: solid 1px #000;
-	box-shadow: -4px 4px 5px #000, -4px 2px 5px #000;
-	border-radius: 15px 0 0 15px;
+	background: rgba(0, 0, 0, 0.77);
+	border-radius: 2px 0 0 2px;
     transition: right 0.3s;
+    z-index: 9999;
+    user-select: none;
 }
 	#AdminBox a {
 		color: #fff;

@@ -29,6 +29,7 @@ html {
 	border: solid 1px #000;
 	box-shadow: -4px 4px 5px #000, -4px 2px 5px #000;
 	border-radius: 15px 0 0 15px;
+    transition: right 0.3s;
 }
 	#AdminBox a {
 		color: #fff;
@@ -90,7 +91,7 @@ body {
 /*NAV START*/
 
 
-#nav-image {
+.nav-image {
 	position: absolute;
 	height: 100%;
 	vertical-align: top;
@@ -925,13 +926,13 @@ figure img {
 }
 
 
-/*Figcaption på /Home/Index START*/
+/*Figcaption på /Home/Index, /Product/Index START*/
 @media (max-width: 320px){
 
-	#product-section figcaption >h4{
-		font-size:0.6em;
-		margin-top:5px;
-		margin-bottom:3px;
+#product-section figcaption >h4, #product-all figcaption > h4{
+	font-size:0.6em;
+	margin-top:5px;
+	margin-bottom:3px;
 	
 }
 
@@ -946,54 +947,54 @@ figure img {
 }
 @media (min-width: 321px) and (max-width: 500px){
 	
-	#product-section figcaption >h4{
-		font-size:0.7em;
-		margin-top:5px;
-		margin-bottom:3px;
+#product-section figcaption >h4, #product-all figcaption > h4{
+	font-size:0.7em;
+	margin-top:5px;
+	margin-bottom:3px;
 	
 }
 
-#product-section figcaption >p{
+#product-section figcaption >p,#product-all figcaption > p{
 	font-size:0.6em;
 }
 
-#product-section figcaption{
+#product-section figcaption, #product-all figcaption{
 	height: 30%;
 	padding-top: 3px;
 }
+
 }
 @media (min-width: 501px) and (max-width: 768px){
 	
-	#product-section figcaption >h4{
-		font-size:1em;
-		margin-top:5px;
-		margin-bottom:3px;
+#product-section figcaption >h4, #product-all figcaption > h4{
+	font-size:1em;
+	margin-top:5px;
+	margin-bottom:3px;
 	
 }
 
-#product-section figcaption >p{
+#product-section figcaption >p, #product-all figcaption > p{
 	font-size: 1em;
 }
 
-#product-section figcaption{
+#product-section figcaption, #product-all figcaption{
 	height: 30%;
 	padding-top: 3px;
 }
 }
 @media (min-width: 769px) and (max-width: 850px){
-	
-	#product-section figcaption >h4{
-		font-size:0.8em;
-		margin-top:5px;
-		margin-bottom:5px;
-	
+
+#product-section figcaption > h4 {
+    font-size: 0.8em;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-#product-section figcaption >p{
+#product-section figcaption >p, #product-all figcaption > p{
 	font-size: 0.7em;
 }
 
-#product-section figcaption{
+#product-section figcaption, #product-all figcaption{
 	height: 14%;
 	padding-top: 3px;
 }
@@ -1002,6 +1003,27 @@ figure img {
 	height: 55px;
 	
 }
+
+#product-all figcaption > h4 {
+    font-size: 0.8em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#product-all figcaption >p, #product-all figcaption > p{
+	font-size: 0.7em;
+}
+
+#product-all figcaption, #product-all figcaption{
+	height: 14%;
+	padding-top: 3px;
+}
+
+#product-all figure:hover figcaption{
+	height: 55px;
+	
+}
+
 }
 @media (min-width: 851px) and (max-width: 1000px){
 	

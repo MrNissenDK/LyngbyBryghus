@@ -622,6 +622,13 @@ figure img {
 	margin-bottom:5px;
 }
 
+.add-product input{
+    width:100%;
+}
+.add-product textarea   {
+    width:100%;
+    height:
+}
 
 /*WYSIWYG START*/
 #Editor {
@@ -837,7 +844,6 @@ figure img {
 
 .textbox{
 	position:relative;
-	padding-right:33px;
 	margin-bottom:5px;
 }
 
@@ -990,11 +996,11 @@ figure img {
     margin-bottom: 5px;
 }
 
-#product-section figcaption >p, #product-all figcaption > p{
+#product-section figcaption >p{
 	font-size: 0.7em;
 }
 
-#product-section figcaption, #product-all figcaption{
+#product-section figcaption{
 	height: 14%;
 	padding-top: 3px;
 }
@@ -1010,12 +1016,12 @@ figure img {
     margin-bottom: 5px;
 }
 
-#product-all figcaption >p, #product-all figcaption > p{
+#product-all figcaption >p{
 	font-size: 0.7em;
 }
 
-#product-all figcaption, #product-all figcaption{
-	height: 14%;
+#product-all figcaption{
+	height: 30%;
 	padding-top: 3px;
 }
 
@@ -1047,6 +1053,28 @@ figure img {
 	height: 55px;
 	
 }
+
+#product-all figcaption >h4{
+	font-size:1.1em;
+	margin-top:6px;
+	margin-bottom:6px;
+	
+}
+
+#product-all figcaption >p{
+	font-size: 0.7em;
+}
+
+#product-all figcaption{
+	height: 30%;
+	padding-top: 3px;
+}
+
+#product-all figure:hover figcaption{
+	height: 55px;
+	
+}
+
 }
 @media (min-width: 1001px) and (max-width: 1280px){
 	
@@ -1110,9 +1138,9 @@ figure img {
 		padding-top: 0 !important;
 	}
 
-	figure figcaption, figcaption {
+	/*figure figcaption, figcaption {
 		font-size: 0.7em;
-	}
+	}*/
 
 	#info-section > section > section {
 		margin-bottom: 3%;
@@ -1155,9 +1183,9 @@ figure img {
 		padding-right: 14%;
 	}
 
-	figcaption {
+	/*figcaption {
 		font-size: 0.6em;
-	}
+	}*/
 
 	.navbar-brand {
 		width: 405px;

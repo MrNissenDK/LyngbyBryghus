@@ -430,6 +430,11 @@ img {
 	background-color: #ab5958;
 	color: white;
 }
+
+#order-view h2{
+    margin-top:0;
+}
+
 /*BESTILLING SLUT*/
 
 
@@ -472,102 +477,6 @@ img {
 }
 /*KONTAKT SLUT*/
 
-/*FIGURE, FIGCAPTION, LINK START*/
-figure {
-	display: block;
-	position: relative;
-}
-
-a :not(.btn){
-	color: #fff;
-	z-index: 300;
-	 text-decoration:none !important;
-}
-a:hover :not(.btn){
-	color:#fff;
-	 text-decoration:none !important;
-}
-a:hover{
-	text-decoration:none !important;
-}
-
-a:focus{
-	outline:none;
-	 text-decoration:none !important;
-
-}
-
-/* visited link */
-a:visited  :not(.btn){
-	color: #fff;
-	 text-decoration:none !important;
-}
-
-/* selected link */
-a:active :not(.btn) {
-	color: #fff;
-	 text-decoration:none !important;
-
-}
-
-figcaption {
-	position: absolute;
-	bottom: 0;
-	background-color: #333;
-	height: 13%;
-	width: 100%;
-	text-align: center;
-	padding: 3px 10px;
-	color: none;
-	letter-spacing: 2px;
-	font-size: 0.9em;
-	-webkit-transition: all 0.3s ease-in-out; /* For Safari 3.1 to 6.0 */
-	transition: all 0.3s ease-in-out;
-	overflow: hidden;
-}
-
-#product-all figure:hover figcaption {
-	height: 35%;
-	background-color: rgba(0, 0, 0, 0.85);
-	max-height: unset;
-	color: #fff;
-}
-
-#product-section figcaption >h4{
-	font-size:1.3em;
-	margin-bottom:15px;
-}
-
-#product-section figcaption >p{
-	font-size:0.8em;
-}
-
-#product-section figcaption{
-	position: absolute;
-	bottom: 0;
-	background-color: #333;
-	height: 13%;
-	width: 100%;
-	text-align: center;
-	padding-top: 3px;
-	color: none;
-	letter-spacing: 2px;
-	-webkit-transition: all 0.3s ease-in-out; /* For Safari 3.1 to 6.0 */
-	transition: all 0.3s ease-in-out;
-	overflow: hidden;
-}
-
-#product-section figure:hover figcaption {
-	height: 100px;
-	max-height: unset;
-	background-color: rgba(0, 0, 0, 0.85);
-	color: #fff;
-}
-
-figure img {
-	width: 100%;
-}
-/*FIGURE, FIGCAPTION, LINK SLUT*/
 
 /*LOGIN SIDE*/
 .loginbox {
@@ -881,6 +790,91 @@ figure img {
 /*POP-UP VIINDUE SLUT*/
 
 
+/*FIGURE, FIGCAPTION, LINK START*/
+figure {
+	display: block;
+	position: relative;
+}
+
+a :not(.btn){
+	color: #fff;
+	z-index: 300;
+	 text-decoration:none !important;
+}
+a:hover :not(.btn){
+	color:#fff;
+	 text-decoration:none !important;
+}
+a:hover{
+	text-decoration:none !important;
+}
+
+a:focus{
+	outline:none;
+	 text-decoration:none !important;
+
+}
+
+/* visited link */
+a:visited  :not(.btn){
+	color: #fff;
+	 text-decoration:none !important;
+}
+
+/* selected link */
+a:active :not(.btn) {
+	color: #fff;
+	 text-decoration:none !important;
+
+}
+
+figcaption {
+	position: absolute;
+	bottom: 0;
+	background-color: #333;
+	height: 13%;
+	width: 100%;
+	text-align: center;
+	padding: 3px 10px;
+	color: none;
+	letter-spacing: 2px;
+	font-size: 0.9em;
+	-webkit-transition: all 0.3s ease-in-out; /* For Safari 3.1 to 6.0 */
+	transition: all 0.3s ease-in-out;
+	overflow: hidden;
+}
+
+
+#product-section figcaption >h4{
+	font-size:1.3em;
+	margin-bottom:15px;
+}
+
+#product-section figcaption >p{
+	font-size:0.8em;
+}
+
+#product-section figcaption{
+	position: absolute;
+	bottom: 0;
+	background-color: #333;
+	height: 13%;
+	width: 100%;
+	text-align: center;
+	padding-top: 3px;
+	color: none;
+	letter-spacing: 2px;
+	-webkit-transition: all 0.3s ease-in-out; /* For Safari 3.1 to 6.0 */
+	transition: all 0.3s ease-in-out;
+	overflow: hidden;
+}
+
+figure img {
+	width: 100%;
+}
+/*FIGURE, FIGCAPTION, LINK SLUT*/
+
+
 
 
 
@@ -970,7 +964,7 @@ figure img {
 }
 
 }
-@media (min-width: 501px) and (max-width: 768px){
+@media (min-width: 501px) and (max-width: 620px){
 	
 #product-section figcaption >h4, #product-all figcaption > h4{
 	font-size:1em;
@@ -988,70 +982,99 @@ figure img {
 	padding-top: 3px;
 }
 }
+@media (min-width: 621px) and (max-width: 768px){
+	
+#product-section figcaption >h4, #product-all figcaption > h4{
+	font-size:1.4em;
+	margin-top:5px;
+	margin-bottom:3px;
+	
+}
+
+#product-section figcaption >p, #product-all figcaption > p{
+	font-size: 1em;
+}
+
+#product-section figcaption, #product-all figcaption{
+	height: 24%;
+	padding-top: 3px;
+}
+}
+
 @media (min-width: 769px) and (max-width: 850px){
 
 #product-section figcaption > h4 {
-    font-size: 0.8em;
+    font-size: 0.6em;
     margin-top: 5px;
     margin-bottom: 5px;
+    height:15px;
 }
 
 #product-section figcaption >p{
-	font-size: 0.7em;
+	font-size: 0.5em;
 }
 
 #product-section figcaption{
-	height: 14%;
+	height: 25px;
 	padding-top: 3px;
 }
 
-#product-section figure:hover figcaption{
-	height: 55px;
-	
+#product-section figure:hover figcaption {
+    height: 50%;
+    max-height: unset;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
 }
 
 #product-all figcaption > h4 {
-    font-size: 0.8em;
+    font-size: 1.1em;
     margin-top: 5px;
     margin-bottom: 5px;
+    height:20px;
 }
 
 #product-all figcaption >p{
-	font-size: 0.7em;
+	font-size: 0.9em;
 }
 
 #product-all figcaption{
-	height: 30%;
+	height: 35px;
 	padding-top: 3px;
 }
 
-#product-all figure:hover figcaption{
-	height: 55px;
-	
+#product-all figure:hover figcaption {
+height: 35%;
+background-color: rgba(0, 0, 0, 0.85);
+max-height: unset;
+color: #fff;
+
 }
 
 }
 @media (min-width: 851px) and (max-width: 1000px){
 	
-	#product-section figcaption >h4{
-		font-size:1.1em;
-		margin-top:6px;
-		margin-bottom:6px;
+#product-section figcaption >h4{
+	font-size:0.6em;
+	margin-top:6px;
+	margin-bottom:6px;
+    height:15px;
 	
 }
 
 #product-section figcaption >p{
-	font-size: 0.7em;
+	font-size: 0.6em;
 }
 
 #product-section figcaption{
-	height: 15%;
+	height: 25px;
 	padding-top: 3px;
 }
 
-#product-section figure:hover figcaption{
-	height: 55px;
-	
+#product-section figure:hover figcaption {
+    height: 50%;
+    max-height: unset;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
 }
 
 #product-all figcaption >h4{
@@ -1066,23 +1089,26 @@ figure img {
 }
 
 #product-all figcaption{
-	height: 30%;
+	max-height: 30%;
 	padding-top: 3px;
 }
 
-#product-all figure:hover figcaption{
-	height: 55px;
-	
+#product-all figure:hover figcaption {
+height: 35%;
+background-color: rgba(0, 0, 0, 0.85);
+max-height: unset;
+color: #fff;
+
 }
 
 }
-@media (min-width: 1001px) and (max-width: 1280px){
+@media (min-width: 1001px){
 	
 	#product-section figcaption >h4{
-		font-size:1.1em;
+		font-size:0.9em;
 		margin-top:7px;
 		margin-bottom:7px;
-	
+	    height:20px;
 }
 
 #product-section figcaption >p{
@@ -1090,15 +1116,48 @@ figure img {
 }
 
 #product-section figcaption{
-	height: 14%;
+	height: 35px;
 	padding-top: 3px;
 }
 
-#product-section figure:hover figcaption{
-	height: 85px;
-	
+#product-section figure:hover figcaption {
+    height: 35%;
+    max-height: unset;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+}
+
+
+#product-all figure:hover figcaption {
+height: 35%;
+background-color: rgba(0, 0, 0, 0.85);
+max-height: unset;
+color: #fff;
+
 }
 }
+
+
+/*Figcaption hover*/
+@media (min-width: 769px) and (max-width: 1280px) {
+    /*#product-section figure:hover figcaption {
+        height: 100px;
+        max-height: unset;
+        background-color: rgba(0, 0, 0, 0.85);
+        color: #fff;
+    }*/
+
+    /*#product-all figure:hover figcaption {
+	height: 35%;
+	background-color: rgba(0, 0, 0, 0.85);
+	max-height: unset;
+	color: #fff;
+    padding-left:0;
+    padding-right:0;
+}*/
+
+}
+
 /*Figcaption på /Home/Index SLUT*/
 
 

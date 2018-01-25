@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@{
+	int num = 0;
+	if (Session["role"] != null)
+	{
+		int.TryParse(Session["role"].ToString(), out num);
+
+	}
+	bool Editor = (num >= 10);
+}
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -15,6 +24,13 @@
 	<link href="~/CascadingStyleSheet/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
 	<link href="~/Scripts/Croppie-2.5.1/croppie.css" rel="stylesheet" />
 	<link href="~/CascadingStyleSheet/StyleSheet_CA.css" rel="stylesheet" />
+	@if(Editor){
+	<style>
+	.textbox{
+		padding-right: 33px;
+	}
+	</style>
+	}
 </head>
 <body>
 
@@ -88,7 +104,7 @@
 	</div>
 
 	@if(Session["user"] != null){
-	<div id="AdminBox">
+	<div id="AdminBox" style="display: none;">
 		<h3>@Session["user"]</h3>
 		<h5>@Session["Role"]</h5>
 		<a href="/user/ControlPanle">Kontrol panel</a><br />

@@ -1,6 +1,53 @@
 ﻿
 let searchValue = "";
+var lastScreenX = null;
 $(function () {
+	if (localStorage.getItem("AdminBox") != null) {
+		$("#AdminBox").css("right", localStorage.getItem("AdminBox"));
+		$("#AdminBox").css("display","");
+	}
+	document.addEventListener("touchmove", function (e) {
+		let sx = e.changedTouches[0].screenX;
+		if (sx >= window.innerWidth*0.95 && sx <= window.innerWidth) {
+			var drag = 0;
+			if (lastScreenX)
+				drag = e.changedTouches[0].screenX -lastScreenX;
+			lastScreenX = e.changedTouches[0].screenX;
+
+			if (drag < 0) {
+				localStorage.setItem("AdminBox", "-10px");
+				$("#AdminBox").css("right", "-10px");
+			} else if (drag > 0) {
+				localStorage.setItem("AdminBox", "-145px");
+				$("#AdminBox").css("right", "-145px");
+			}
+		} else {
+			lastScreenX = null;
+		}
+	},false);
+	document.addEventListener("mousemove", function (e) {
+		console.log(e);
+		if (e.buttons == 1 && e.screenX >= window.innerWidth * 0.95 && e.screenX <= window.innerWidth) {
+			var drag = 0;
+			if (lastScreenX)
+				drag = e.screenX - lastScreenX;
+			lastScreenX = e.screenX;
+
+			if (drag < 0) {
+				localStorage.setItem("AdminBox", "-10px");
+				$("#AdminBox").css("right", "-10px");
+			} else if (drag > 0) {
+				localStorage.setItem("AdminBox", "-145px");
+				$("#AdminBox").css("right", "-145px");
+			}
+		} else {
+			lastScreenX = null;
+		}
+	}, false);
+
+
+
+
 	$("a.cattegoryLink").click(function (e) {
 		e.preventDefault();
 		let ancher = $(this);
@@ -19,6 +66,7 @@ $(function () {
 			},400);
 		}
 	});
+
 	let dom = new DOMParser();
 	tinymce.init({
 		selector: '#Editor textarea',
@@ -59,31 +107,6 @@ $(function () {
 		value = $(ancher.attr("data-target"));
 		Editor.find("form input[name=jPath]").val(jPath);
 		Editor.find("form .Title").text(title);
-
-		//tinymce.remove();
-		//tinymce.init({
-		//	selector: '#Editor textarea',
-		//	forced_root_block: "",
-		//	forced_root_block_attrs: "",
-		//	force_br_newlines: true,
-		//	force_p_newlines: false,
-		//	height: 467,
-		//	border: 0,
-		//	width: 498,
-		//	verify_html: false,
-		//	plugins: [
-		//		"advlist autolink lists link image charmap print preview anchor",
-		//		"searchreplace visualblocks code fullscreen",
-		//		"insertdatetime media table paste imagetools wordcount"
-		//	],
-		//	toolbar: "insertfile undo redo | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link image",
-		//	// imagetools_cors_hosts: ['www.tinymce.com', 'codepen.io'],
-		//	content_css: [
-		//		'/bootstrap-3.3.7-dist/css/bootstrap.min.css',
-		//		'/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css',
-		//		'/CascadingStyleSheet/font-awesome-4.7.0/css/font-awesome.css'
-		//	]
-		//});
 
 		let index = value[0].outerHTML.indexOf(value[0].innerHTML);
 		searchValue = value[0].outerHTML.substring(0, index);

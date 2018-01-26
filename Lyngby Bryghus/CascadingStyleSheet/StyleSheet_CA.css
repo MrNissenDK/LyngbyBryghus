@@ -19,6 +19,16 @@ html {
     height: 100%;
 }
 
+body {
+    position: relative;
+    min-height: 100%;
+    font-size: 16px;
+    font-family: Raleway-Regular, sans-serif;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    overflow: scroll;
+}
+
 #AdminBox {
     color: #fff;
     position: fixed;
@@ -78,14 +88,6 @@ html {
     height: same-as-width;
 }
 
-body {
-    position: relative;
-    min-height: 100%;
-    font-size: 16px;
-    font-family: Raleway-Regular, sans-serif;
-    padding-top: 60px;
-    padding-bottom: 80px;
-}
 
 /*REDIGER KNAP*/
 .textbox h2 {

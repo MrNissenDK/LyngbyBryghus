@@ -9,6 +9,7 @@ using Repos.Models;
 using Newtonsoft.Json;
 using Lyngby_Bryghus.Helpers;
 using Newtonsoft.Json.Linq;
+using Lyngby_Bryghus.ViewFactories;
 
 namespace Lyngby_Bryghus.Controllers
 {
@@ -40,6 +41,19 @@ namespace Lyngby_Bryghus.Controllers
         {
             return View(JObject.Parse(FT.LoadFile(Request.PhysicalApplicationPath + "/ServerData/Pages.json")));
         }
+
+        
+        public ActionResult SendMail(string businessName, string name, string email, string phoneNumber, string message)
+        {
+            //Mailer mailer = new Mailer();
+            //mailer.Send(businessName, name, email, phoneNumber, message);
+
+            ViewBag.MSG = "Mailen er sendt!!!";
+
+
+            return Json(ViewBag.MSG, JsonRequestBehavior.DenyGet);
+        }
+
 
         public ActionResult Details()
         {

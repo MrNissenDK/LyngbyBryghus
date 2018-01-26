@@ -4,5 +4,11 @@
     "inputFiles": [
       "CascadingStyleSheet/StyleSheet_CA.css"
     ]
+  },
+  {
+    "outputFileName": "Scripts/jquery.validate.min.js",
+    "inputFiles": [
+      "Scripts/jquery.validate.js"
+    ]
   }
 ]

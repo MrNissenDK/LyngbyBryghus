@@ -29,7 +29,7 @@
 
 <div style="max-width: 960px;" class="container" id="contactpage">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6">
             <div class="textbox">
                 @Html.Raw(Model["Pages"]["/Home/Contact"]["Title"])
                 @if (Editor)
@@ -85,25 +85,61 @@
                 </li>
             </ul>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6">
             <h2>Send os en besked</h2>
-            <form method="post" action="/Home/Contactform">
-                <label>Firmanavn:</label>
-                <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
-                <br />
-                <label>Navn:</label>
-                <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
-                <br />
-                <label>E-mailadresse:</label>
-                <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
-                <br />
-                <label>Tlf. nummer:</label>
-                <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
-                <br />
-                <label>Besked:</label>
-                <br />
-                <textarea style="width:100%"></textarea>
-            </form>
+            <form id="myForm">
+                <div class="form-group">
+                    <label>Firmanavn:</label>
+                    <input id="businessName" name="businessName" type="text" placeholder="" class="form-control input-md">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Navn:</label>
+                        <input id="name" name="name" type="text" placeholder="" class="form-control input-md">
+                    </div>
+                <div class="form-group">
+                    <label>E-mailadresse:</label>
+                    <input id="email" name="email" type="text" placeholder="" class="form-control input-md">
+                  </div>
+                <div class="form-group">
+                    <label>Tlf. nummer:</label>
+                    <input id="phoneNumber" name="phoneNumber" type="text" placeholder="" class="form-control input-md">
+                    </div>
+                <div class="form-group">
+                    <label>Besked:</label>
+                        <textarea id="message" name="message" style="width:100%"></textarea>
+                    </div>
+                <br/>
+                    <button id="button1id" name="button1id" class="btn btn-custom">SEND</button>
+                    <p id="ViewBag"><br /></p>
+
+</form>
         </div>
     </div>
 </div>
+
+
+
+@section JS_form{
+    <script>
+
+    $('#myForm').submit(function (e) {
+        e.preventDefault();
+        var $form = $(this);
+        if (!$form.valid()) return false;
+        $.ajax({
+            url: "/Home/SendMail/",
+            type: 'post',
+            data: $("#myForm").serialize(),
+            success: function(data) {
+                $("#ViewBag").html(data);
+                $("#myForm").trigger("reset");
+            },
+            error: function () {
+                alert("no connection to server")
+            }
+        });
+    });
+
+    </script>
+}

@@ -199,6 +199,10 @@
     <Content Include="Scripts\Croppie-2.5.1\test\unit\stubs\HTMLElement.js" />
     <Content Include="Scripts\Croppie-2.5.1\test\unit\stubs\window.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js">
+      <DependentUpon>jquery.validate.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\likebutton.js" />
     <Content Include="Scripts\Main_JavaScript.js" />
     <Content Include="Scripts\nav_JavaScript.js" />
@@ -281,6 +285,7 @@
     <Content Include="Scripts\tinymce\themes\mobile\theme.min.js" />
     <Content Include="Scripts\tinymce\themes\modern\theme.min.js" />
     <Content Include="Scripts\tinymce\tinymce.min.js" />
+    <Content Include="Scripts\validate_JavaScript.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -293,6 +298,7 @@
     </Compile>
     <Compile Include="Helper\FileTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewFactories\Mailer.cs" />
     <Compile Include="ViewModels\HomeView.cs" />
     <Compile Include="ViewModels\PackageView.cs" />
     <Compile Include="ViewModels\ProductsView.cs" />

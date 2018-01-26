@@ -33,7 +33,15 @@ namespace Lyngby_Bryghus.Controllers
 
         public ActionResult Details(int ID)
         {
-            return View(PF.Get(ID));
+            int next = PF.ExecuteSQL<Products>("Select top 1 * From Products where ID > "+ID)[0].ID;
+
+            ProductDetails pd = new ProductDetails
+            {
+                Next = next,
+                product = PF.Get(ID)
+            };
+
+            return View(pd);
         }
 
 

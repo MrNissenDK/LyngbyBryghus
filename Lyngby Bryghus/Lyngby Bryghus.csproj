@@ -301,6 +301,7 @@
     <Compile Include="ViewFactories\Mailer.cs" />
     <Compile Include="ViewModels\HomeView.cs" />
     <Compile Include="ViewModels\PackageView.cs" />
+    <Compile Include="ViewModels\ProductDetails.cs" />
     <Compile Include="ViewModels\ProductsView.cs" />
     <Compile Include="ViewModels\SubscriptionView.cs" />
   </ItemGroup>

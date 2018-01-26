@@ -94,9 +94,15 @@ namespace Lyngby_Bryghus.Controllers
                 }
             return Redirect("/Product/Index/");
         }
-        public ActionResult updateProduct()
+        public ActionResult updateProduct(int ID)
         {
-            return View();
+            return View(pf.Get(ID));
+        }
+        [HttpPost]
+        public ActionResult updateProduct(Products p)
+        {
+            pf.Update(p);
+            return View("/Product/Details/"+p.ID);
         }
         public ActionResult deletProduct(int ID)
         {

@@ -4,12 +4,20 @@
 	Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
-<form method="post" enctype="multipart/form-data">
-	<label>Title for event:</label><br />
-	<input name="Name" type="text" /><br />
-	<label>Dato for event:</label><br />
-	<input name="Date" type="date" /><br />
-	<label>Beskrivelse af event:</label><br />
-	<textarea name="Description"></textarea><br />
-	<button type="submit">Gem</button>
-</form>
+<div class="container-fluid" id="add-event">
+    <div class="row paddingT20">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <form method="post" enctype="multipart/form-data">
+                <label>Title for event:</label><br />
+                <input name="Name" type="text" /><br />
+                <label>Dato for event:</label><br />
+                <input name="Date" type="date" /><br />
+                <label>Beskrivelse af event:</label><br />
+                <textarea name="Description"></textarea><br />
+                <button type="submit" class="btn btn-custom">GEM</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+

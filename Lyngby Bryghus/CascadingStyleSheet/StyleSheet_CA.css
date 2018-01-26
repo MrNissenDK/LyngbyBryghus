@@ -502,6 +502,11 @@ img {
 }
 
 
+#add-event input, #add-event textarea{
+    width:100%;
+    margin-bottom:20px;
+}
+
 
 
 

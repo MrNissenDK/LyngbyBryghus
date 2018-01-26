@@ -1,14 +1,14 @@
-﻿@using Repos.Models
-@model Products
+﻿@using Lyngby_Bryghus.ViewModels
+@model ProductDetails
 @{
-    ViewBag.Title = Model.Name;
+    ViewBag.Title = Model.product.Name;
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
 <section class="container paddingT20" id="product-details">
 
     <header class="row">
-        <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12">@Model.Name</h2>
+        <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12">@Model.product.Name</h2>
     </header>
 
     <article class="row row-eq-height paddingB20">
@@ -16,8 +16,8 @@
         <section class="col-lg-4 col-md-4 col-sm-offset-0 col-sm-6 col-xs-offset-3 col-xs-6 product-image">
             <a href="#">
                 <figure>
-                    <img src="~/Images/ProductAllImages/Small/@Model.Image" class="img-responsive"  type="button" data-toggle="modal" data-target="#myModal"  />
-                    <figcaption><p>Pris: @Model.Price kr</p></figcaption>
+                    <img src="~/Images/ProductAllImages/Small/@Model.product.Image" class="img-responsive"  type="button" data-toggle="modal" data-target="#myModal"  />
+                    <figcaption><p>Pris: @Model.product.Price kr</p></figcaption>
                 </figure>
                 
             </a>
@@ -28,7 +28,7 @@
             <section class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h3 class="marginT0">Beskrivelse</h3>
-                    <p>@Model.Description</p>
+                    <p>@Model.product.Description</p>
                 </div>
             </section>
 
@@ -36,15 +36,15 @@
             <section class="row product-text-last">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <h3>Detalijeret info</h3>
-                    <p>@Model.Details</p>
+                    <p>@Model.product.Details</p>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <h3>Praktisk Info</h3>
-                    <p>@Model.Info</p>
+                    <p>@Model.product.Info</p>
                 </div>
             </section>
 
-            <a href="#" class="btn btn-custom">Se næste</a>
+            <a href="/Product/details/@Model.Next" class="btn btn-custom">Se næste</a>
         </section>
     </article>
 
@@ -60,10 +60,10 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">@Model.Name</h4>
+                    <h4 class="modal-title">@Model.product.Name</h4>
                 </div>
                 <div class="modal-body">
-                    <img src="~/Images/ProductAllImages/Small/@Model.Image" class="img-responsive"/>
+                    <img src="~/Images/ProductAllImages/Small/@Model.product.Image" class="img-responsive"/>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-custom" data-dismiss="modal">Luk</button>

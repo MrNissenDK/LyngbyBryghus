@@ -83,20 +83,6 @@ body {
     margin-top: 4%;
 }
 
-.maintain {
-    max-width: 100%;
-    height: same-as-width;
-}
-
-
-/*REDIGER KNAP*/
-.textbox h2 {
-    display: inline-block;
-}
-
-.textbox p {
-    display: inline-block;
-}
 /*NAV START*/
 
 
@@ -208,6 +194,7 @@ body {
         transition: background-color 0.3s ease 0s;
         transition-duration: 2s;
     }
+
 /*NAV SLUT*/
 
 

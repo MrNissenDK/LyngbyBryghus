@@ -378,6 +378,7 @@
     <Content Include="Scripts\Croppie-2.5.1\README.md" />
     <Content Include="Scripts\Croppie-2.5.1\test\unit\mocha.opts" />
     <Content Include="Views\User\addEvent.cshtml" />
+    <Content Include="Views\User\updateProduct.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

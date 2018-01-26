@@ -1,0 +1,97 @@
+﻿@using Repos.Models
+@model Products
+@{
+	ViewBag.Title = "updateProduct";
+	Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@{
+	ViewBag.Title = "addProduct";
+	Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<form method="post" enctype="multipart/form-data">
+	<section class="container paddingT20 add-product" id="product-details">
+
+		<article class="row row-eq-height paddingB20">
+
+			<section class="col-lg-4 col-md-4 col-sm-offset-0 col-sm-6 col-xs-offset-3 col-xs-6 product-image">
+
+				<input type="file" accept="image/*" name="file" />
+				<figure class="imageUpload">
+					<div id="cropper">
+
+					</div>
+					@section js{
+						<script>
+									let c = $('#cropper').croppie({
+										viewport: { width: 290, height: 348 },
+										boundary: {
+											width: 290,
+											height: 348
+										},
+										showZoomer: false,
+										update: function () {
+											getResult()
+										},
+									});
+
+									function getResult(){
+										c.croppie('result', 'canvas').then(function (src) {
+											console.log(src);
+										});
+									}
+									let reader = new FileReader();
+									reader.onloadend = function () {
+										c.croppie("bind", {
+											url: reader.result
+										});
+									}
+									$("input[name='file']").on('change', function () {
+										reader.readAsDataURL(this.files[0]);
+
+									});
+						</script>
+					}
+					<img src="" class="img-responsive" type="button" />
+				</figure>
+
+
+			</section>
+
+			<section class="col-lg-8 col-md-8 col-md-6 col-xs-12 product-text">
+
+				<section class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<h3 class="marginT0">Navn</h3>
+						<input type="text" name="Name" />
+						<h3 class="marginT0">På lager</h3>
+						<input type="number" step="any" name="Stock" />
+						<h3 class="marginT0">Pris</h3>
+						<input type="number" step="any" name="Price" />
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<h3 class="marginT0">Beskrivelse</h3>
+						<textarea name="Description"></textarea>
+					</div>
+				</section>
+
+
+				<section class="row product-text-last">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<h3>Detalijeret info</h3>
+						<textarea name="Details"></textarea>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<h3>Praktisk Info</h3>
+						<textarea name="Info"></textarea>
+					</div>
+				</section>
+
+				<button type="submit" class="btn btn-custom">Gem</button>
+			</section>
+		</article>
+
+
+	</section>
+
+</form>

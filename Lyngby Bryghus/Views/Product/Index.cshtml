@@ -62,7 +62,7 @@
 					@if (Editor)
                     {
                         <a href="/User/EditProduct/@product.ID" class="btn btn-edit btn-edit-product" title="Rediger @product.Name"><i class="fa fa-pencil-square-o"></i></a>
-						<a href="/User/deletProduct/@product.ID" class="btn btn-danger" title="Slet @product.Name"><i class="fa fa-times"></i></a>
+						<a href="/User/deletProduct/@product.ID" class="btn btn-danger" onclick="" title="Slet @product.Name"><i class="fa fa-times"></i></a>
 					}
 					<a href="/Product/Details/@product.ID">
 						<img src="~/Images/ProductAllImages/Small/@product.Image" class="img-responsive" />
@@ -85,3 +85,25 @@
 		}
 	}
 </section>
+@section js {
+<script>
+function confirmation() {
+    var person = confirm("Er du sikker på du vil slette det?");
+    if (person) {
+       return true;
+    } else {
+        return false;
+    }
+}
+
+//$("a.btn.btn-danger").click(function (e) {
+//    e.preventDefault()
+//    var person = confirm("Er du sikker på du vil slette det?");
+//    if (person) {
+//        e = e.originalEvent;
+//    } else {
+//        return false;
+//    }
+//})
+</script>
+ }

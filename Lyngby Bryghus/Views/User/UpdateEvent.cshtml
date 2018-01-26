@@ -1,0 +1,15 @@
+﻿@using Repos.Models;
+@model Event
+@{
+	ViewBag.Title = "UpdateEvent";
+	Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<form method="post" enctype="multipart/form-data">
+	<label>Title for event:</label><br />
+	<input name="Name" type="text" value="@Model.Name"/><br />
+	<label>Dato for event:</label><br />
+	<input name="Date" type="date" value="@Model.Date.ToString("yyyy-MM-dd")"/><br />
+	<label>Beskrivelse af event:</label><br />
+	<textarea name="Description">@Model.Description</textarea><br />
+	<button type="submit">Gem</button>
+</form>

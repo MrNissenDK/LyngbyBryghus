@@ -99,10 +99,14 @@ namespace Lyngby_Bryghus.Controllers
             return View(pf.Get(ID));
         }
         [HttpPost]
-        public ActionResult updateProduct(Products p)
+        public ActionResult updateProduct(Products p, int ID, HttpPostedFileBase file)
         {
+            p.Price = Decimal.Parse(Request["Price"].Replace(".", ","));
+            p.Stock = Decimal.Parse(Request["Stock"].Replace(".", ","));
+
+            p.ID = ID;
             pf.Update(p);
-            return View("/Product/Details/"+p.ID);
+            return Redirect("/Product/Details/" + p.ID);
         }
         public ActionResult deletProduct(int ID)
         {
@@ -131,6 +135,17 @@ namespace Lyngby_Bryghus.Controllers
                 }
 
             return View();
+        }
+        public ActionResult UpdateEvent(int ID)
+        {
+            return View(EF.Get(ID));
+        }
+        [HttpPost]
+        public ActionResult UpdateEvent(Event e, int ID)
+        {
+            e.ID = ID;
+            EF.Update(e);
+            return Redirect("/Home/");
         }
     }
 }

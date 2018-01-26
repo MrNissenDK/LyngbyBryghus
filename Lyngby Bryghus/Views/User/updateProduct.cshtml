@@ -37,7 +37,7 @@
 
 									function getResult(){
 										c.croppie('result', 'canvas').then(function (src) {
-											console.log(src);
+
 										});
 									}
 									let reader = new FileReader();
@@ -50,9 +50,14 @@
 										reader.readAsDataURL(this.files[0]);
 
 									});
+
+									$(function() {
+										c.croppie("bind", {
+											url: "/Images/ProductAllImages/Small/@Model.Image.ToString()",
+										});
+									});
 						</script>
 					}
-					<img src="" class="img-responsive" type="button" />
 				</figure>
 
 
@@ -63,15 +68,15 @@
 				<section class="row">
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 						<h3 class="marginT0">Navn</h3>
-						<input type="text" name="Name" />
+						<input type="text" name="Name" value="@Model.Name"/>
 						<h3 class="marginT0">På lager</h3>
-						<input type="number" step="any" name="Stock" />
+						<input type="number" step="any" name="Stock"  value="@Model.Stock.ToString().Replace(',','.')" />
 						<h3 class="marginT0">Pris</h3>
-						<input type="number" step="any" name="Price" />
+						<input type="number" step="any" name="Price"  value="@Model.Price.ToString().Replace(',','.')"/>
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 						<h3 class="marginT0">Beskrivelse</h3>
-						<textarea name="Description"></textarea>
+						<textarea name="Description">@Model.Description</textarea>
 					</div>
 				</section>
 
@@ -79,11 +84,11 @@
 				<section class="row product-text-last">
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 						<h3>Detalijeret info</h3>
-						<textarea name="Details"></textarea>
+						<textarea name="Details">@Model.Details</textarea>
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 						<h3>Praktisk Info</h3>
-						<textarea name="Info"></textarea>
+						<textarea name="Info">@Model.Info</textarea>
 					</div>
 				</section>
 

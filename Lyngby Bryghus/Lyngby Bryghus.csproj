@@ -380,6 +380,7 @@
     <Content Include="Views\User\addEvent.cshtml" />
     <Content Include="Views\User\updateProduct.cshtml" />
     <Content Include="Views\User\UpdateEvent.cshtml" />
+    <Content Include="Views\Home\Footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

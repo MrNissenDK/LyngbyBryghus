@@ -1,0 +1,50 @@
+﻿@using Newtonsoft.Json.Linq
+@model JObject
+@{
+	int num = 0;
+	if (Session["role"] != null)
+	{
+		int.TryParse(Session["role"].ToString(), out num);
+
+	}
+	bool Editor = (num >= 10);
+}
+
+<span>
+	@Html.Raw(Model["Layout"]["Footer"]["Company"])
+	@if (Editor)
+	{
+	<a data-jPath="['Layout']['Footer']['Company']" data-target=".Footer-name" data-Title="Firma navn" class="Edit btn btn-edit" title="Rediger firma navn"><i class="fa fa-pencil-square-o"></i></a>
+	}
+</span> -
+
+<span>
+	@Html.Raw(Model["Layout"]["Footer"]["Street"])
+	@if (Editor)
+	{
+	<a data-jPath="['Layout']['Footer']['Street']" data-target=".Footer-address" data-Title="Street navn" class="Edit btn btn-edit" title="Rediger firma navn"><i class="fa fa-pencil-square-o"></i></a>
+	}
+</span> -
+
+<span>
+	@Html.Raw(Model["Layout"]["Footer"]["City"])
+	@if (Editor)
+	{
+	<a data-jPath="['Layout']['Footer']['City']" data-target=".Footer-city" data-Title="By navn" class="Edit btn btn-edit" title="Rediger firma navn"><i class="fa fa-pencil-square-o"></i></a>
+	}
+</span> -
+
+<span>
+	@Html.Raw(Model["Layout"]["Footer"]["Email"])
+	@if (Editor)
+	{
+	<a data-jPath="['Layout']['Footer']['Email']" data-target=".Footer-mail" data-Title="Firma navn" class="Edit btn btn-edit" title="Rediger firma navn"><i class="fa fa-pencil-square-o"></i></a>
+	}
+</span> -
+<span>
+	@Html.Raw(Model["Layout"]["Footer"]["Phone"])
+	@if (Editor)
+	{
+	<a data-jPath="['Layout']['Footer']['Phone']" data-target=".Footer-phone" data-Title="Firma navn" class="Edit btn btn-edit" title="Rediger firma navn"><i class="fa fa-pencil-square-o"></i></a>
+	}
+</span>

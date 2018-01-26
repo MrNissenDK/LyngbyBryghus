@@ -72,5 +72,13 @@ namespace Lyngby_Bryghus.Controllers
             return Redirect(Request.UrlReferrer.ToString());
         }
 
+
+
+        //Child action
+        public ActionResult Footer()
+        {
+            return View(JObject.Parse(FT.LoadFile(Request.PhysicalApplicationPath + "/ServerData/Pages.json")));
+        }
+
     }
 }

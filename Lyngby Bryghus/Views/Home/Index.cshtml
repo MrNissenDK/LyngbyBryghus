@@ -173,6 +173,7 @@
 			<div class="modal-body">
 				@foreach (Event ev in Model.Events)
 				{
+					<a href="/user/UpdateEvent/@ev.ID">Redigere</a>
 					<h3>@ev.Name</h3>
 					<p>@ev.Date.ToShortDateString()</p>
 					<p>@ev.Description</p>

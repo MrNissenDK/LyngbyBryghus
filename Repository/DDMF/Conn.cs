@@ -29,7 +29,7 @@ namespace Duser
         /// <returns>Retunere en åben forbindelse til databasen</returns>
         public static SqlConnection CreateConnection()
         {
-            var cn = GetCon("sql.itcn.dk\\VID", "mads327b5.VID", "mads327b.VID", "3JU74Swc2m");
+            var cn = GetCon("HOST", "DB", "NAME", "PASS");
             cn.Open();
             return cn;
         }
